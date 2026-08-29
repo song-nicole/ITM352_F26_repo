@@ -25,6 +25,22 @@ def divide(x, y):
     return x / y
 
 
+def calculate(num1, num2, choice):
+    """Perform the selected calculation and return the result."""
+    if choice == '1':
+        return add(num1, num2), f"{num1} + {num2} = {add(num1, num2)}"
+    elif choice == '2':
+        return subtract(num1, num2), f"{num1} - {num2} = {subtract(num1, num2)}"
+    elif choice == '3':
+        return multiply(num1, num2), f"{num1} * {num2} = {multiply(num1, num2)}"
+    elif choice == '4':
+        return divide(num1, num2), f"{num1} / {num2} = {divide(num1, num2)}"
+    elif choice == '5':
+        return None, "exit"
+    else:
+        raise ValueError("Invalid choice. Please select 1, 2, 3, 4, or 5.")
+
+
 def main():
     """Main function to run the calculator"""
     print("=" * 40)
@@ -47,25 +63,13 @@ def main():
             print("5. Exit")
             
             choice = input("\nEnter choice (1/2/3/4/5): ").strip()
-            
-            # Perform the selected operation
-            if choice == '1':
-                result = add(num1, num2)
-                print(f"\n{num1} + {num2} = {result}")
-            elif choice == '2':
-                result = subtract(num1, num2)
-                print(f"\n{num1} - {num2} = {result}")
-            elif choice == '3':
-                result = multiply(num1, num2)
-                print(f"\n{num1} * {num2} = {result}")
-            elif choice == '4':
-                result = divide(num1, num2)
-                print(f"\n{num1} / {num2} = {result}")
-            elif choice == '5':
+            result, message = calculate(num1, num2, choice)
+
+            if message == "exit":
                 print("\nThank you for using the calculator. Goodbye!")
                 break
-            else:
-                print("\nInvalid choice. Please select 1, 2, 3, 4, or 5.")
+
+            print(f"\n{message}")
                 
         except ValueError as e:
             print(f"\n{e}")
