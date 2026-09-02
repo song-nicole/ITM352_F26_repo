@@ -39,7 +39,7 @@ daily_cat_food_consumption = 0.8
 monthly_cat_food_consumption = daily_cat_food_consumption * 30
 print("My cats eat about ", monthly_cat_food_consumption, " cups of food a month.")
 
-professional_email_signature = name + " " +major + " " + expected_graduation_year
+professional_email_signature = name + " " + major + " " + str(expected_graduation_year)
 
 address = "2500 Campus Road, Honolulu, HI 96822"
 address2 = '''2500 Campus Road,
@@ -47,7 +47,7 @@ Honolulu, HI 96822'''
 
 initials = "N. S."
 birth_year = 2006
-social_media_username = initials + birth_year
+social_media_username = initials + str(birth_year)
 
 hobby1 = "felting"
 hobby2 = "gardening"
