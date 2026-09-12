@@ -17,3 +17,7 @@ def min(num1, num2):
  returns the value when you raise the base to the power of the exponent. Code here'''
 def exponent(base, exponent):
     return base ** exponent
+
+
+def describe_function(x, y, function):
+    return f"The function {function.__name__} {x},{y} = {function(x, y)}"
