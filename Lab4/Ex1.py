@@ -17,3 +17,7 @@ print("Your full name using format method is: {} {}. {}".format(first, middle_in
 
 #join()
 print("Your full name using list joins is: " + " ".join([first, middle_initial + ". ", last]))
+
+#.format with list unpacking
+name_parts = [first, middle_initial, last]
+print("Your full name using format method is: {} {}. {}".format(*name_parts))
