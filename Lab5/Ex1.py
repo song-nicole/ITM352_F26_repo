@@ -1,0 +1,11 @@
+#Define a dictionary named taxi_trip_info to hold trip information
+
+taxi_trip_info = {
+    "Trip_id": "da7a62fce",
+    "Trip_secconds": 360,
+    "Trip_miles": 1.1,
+    "Fare": "$6.25"
+}
+print("Taxi trip information:", taxi_trip_info)
+print("Trip miles:", taxi_trip_info["Trip_miles"])
+
