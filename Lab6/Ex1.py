@@ -5,8 +5,11 @@ is_it_true = emotions[-1] == "happy" and len(emotions) > 3
 #double == sign is for comparison
 
 print(is_it_true)
+
+#Method 1
 print(emotions[-1] == "happy" and len(emotions) > 3)
 
+#Method 2
 if len(emotions) > 3 and emotions[-1] == "happy":
     print(True)
 else:
