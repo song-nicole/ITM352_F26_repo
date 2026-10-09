@@ -11,7 +11,9 @@ questions = {
     "What is the capital of France?": ["Paris", "Toulouse", "Nice", "Avignon"],
     "What is the capital of Germany?": ["Berlin", "Munich", "Hamburg", "Cologne"],
     "What is the airspeed of an unladen swallow?": [10, 12, 15, 8],
-    "The Last Supper was painted by which artist?": ["da Vinci", "Michelangelo", "Raphael", "Caravaggio"]
+    "The Last Supper was painted by which artist?": ["da Vinci", "Michelangelo", "Raphael", "Caravaggio"],
+    "Which NHL player has the most career points?": ["Wayne Gretzky", "Mario Lemieux", "Jaromir Jagr", "Sidney Crosby"],
+    "Which classic novel opens with the line 'Call me Ishmael'?": ["Moby Dick", "The Great Gatsby", "The Old Man and the Sea", "The Scarelet Letter"]
 }
 
 NUM_QUESTIONS_PER_QUIZ = 5
@@ -21,7 +23,8 @@ selected_questions = random.sample(list(questions.items()), num_questions)
 
 num_correct = 0
 
-for num, (question, answer) in enumerate(questions.items(), start=1):
+# changed enumerate(questions, ...) to enumerate(selected_questions) to reflect the number of questions asked in this quiz session
+for num, (question, answer) in enumerate(selected_questions, start=1):
     correct_answer = answer[0]  # The first answer in the list is the correct one
     print(f"\nQuestion {num}: {question}")
 
@@ -42,4 +45,5 @@ for num, (question, answer) in enumerate(questions.items(), start=1):
     else:
         print(f"The answer is {correct_answer}, not {answer!r}.")
 
-print(f"\nYou got {num_correct} out of {len(questions)} correct.")
+print(f"\nYou got {num_correct} out of {len(selected_questions)} correct.")
+# change len(questions) to len(selected_questions) to reflect the number of questions asked in this quiz session
