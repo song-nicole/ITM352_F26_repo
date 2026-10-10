@@ -29,5 +29,30 @@
         "Kahala Mall", 
         "Windward Mall", 
         "Royal Hawaiian Center"
+    ],
+    "What is the name of a famous person born in Hawaii?": [
+        "Bruno Mars", 
+        "Dwayne Johnson", 
+        "Taylor Swift", 
+        "Tom Cruise",
+        "Ariana Grande"
+    ],
+    "Which hawaiian island is known for its active volcanoes?": [
+        "Big Island", 
+        "Maui", 
+        "Oahu", 
+        "Kauai"
+    ],
+    "What is the name of Hawaii's state bird?": [
+        "Nene", 
+        "Pueo", 
+        "I'iwi", 
+        "Apapane"
+    ],
+    "WHat is the most popular hike in Hawaii?": [
+        "Diamond Head", 
+        "Koko Crater", 
+        "Manoa Falls", 
+        "Makapu'u Point"
     ]
 }

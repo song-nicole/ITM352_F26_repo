@@ -4,6 +4,7 @@
 # Create a quiz that asks the user at least 5 multiple choice questions and present at least 4 options
 # Requiremnt 1: Write the history of scores out to a file
 # Requiremnt 2: Add a 50/50 feature that eliminates 2 incorrect answers from the options (this feature can only be used once per quiz)
+# Extra credit: Notify the user when they get a new high score
 
 from string import ascii_lowercase
 import random
@@ -23,33 +24,32 @@ selected_questions = random.sample(list(questions.items()), num_questions)
 
 input("\nWelcome to the Hawaii Quiz! Press 'Enter' to begin. ")
 print("\nYou will be asked 5 questions about Hawaii.")
-print("\nTip! You can type 'hint' to eliminate 2 incorrect answers from the options.\n   *The 50/50 feature can only be used once per quiz.")
+print("\nTip! You can type 'eliminate' to eliminate 2 incorrect answers from the options.\n   *The 50/50 feature can only be used once per quiz.")
 input("\nPress 'Enter' to start the quiz. ")
 
 def prepare_questions(questions, num_questions):
     num_questions = min(num_questions, len(questions))
     return random.sample(list(questions.items()), k=num_questions)
 
-
 def get_answer(question, alternatives):
     labeled_answers = dict(zip(ascii_lowercase, alternatives))
-    global hint
+    global eliminate
 
     for label, answer in labeled_answers.items():
         print(f"{label}. {answer}")
 
     # While loop that ensures the user input is valid and handles the 50/50 feature
     while (answer_label := input("Your answer: ").lower()) not in labeled_answers:
-        if answer_label == "hint" and hint == False:
-            hint = True
+        if answer_label == "eliminate" and eliminate == False:
+            eliminate = True
             incorrect_answers = [ans for ans in alternatives if ans != correct_answer]
             eliminated_answers = random.sample(incorrect_answers, 2)
-            print("\nHint: The following options have been eliminated:")
+            print("\nThe following options have been eliminated:")
             for eliminated in eliminated_answers:
                 print(f"- {eliminated}")
             print()
             continue
-        elif answer_label == "hint" and hint == True:
+        elif answer_label == "eliminate" and eliminate == True:
             print("You have already used the 50/50 feature. You cannot use it again.")
             continue
         else:
@@ -73,7 +73,7 @@ def ask_question(question, alternatives):
 
 # Ask user if they want to play again
 def play_again():
-    replay = input("Would you like to play again? (y/n): ").lower()
+    replay = input("\nWould you like to play again? (y/n): ").lower()
     if replay == "y":
         print("\nStarting a new game...")
         operate()
@@ -104,8 +104,8 @@ questions = prepare_questions(questions, QUESTIONS_PER_QUIZ)
 def operate():
     num_correct = 0
     global highscore
-    global hint
-    hint = False
+    global eliminate
+    eliminate = False
 
     # Main loop
     for num, (question, answers) in enumerate(questions, start=1):
@@ -127,7 +127,6 @@ def operate():
 
     with open("scores.json", "w") as file:
         json.dump(scores, file)
-
 
     score_history()
 
