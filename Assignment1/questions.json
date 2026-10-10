@@ -3,28 +3,31 @@
         "Mauna Kea", 
         "Koko Head", 
         "Mauna Loa", 
-        "Kamakou", 
-        "Kawaikini"],
+        "Kamakou"
+    ],
     "What is Hawaii's state flower?": [
         "Yellow Hibiscus", 
         "Plumeria", 
         "Bird of Paradise", 
-        "Purple Orchid"],
+        "Purple Orchid"
+    ],
     "Which of the following is a native species in Hawaii?": [
         "White Tern", 
         "Mongoose", 
         "Chicken", 
-        "Gecko", 
-        "Myna Bird"],
+        "Gecko"
+    ],
     "What is a popular resturant in the US that doesn't exist in Hawaii?": [
         "In-N-Out Burger", 
         "Chick-fil-A", 
         "Olive Garden", 
         "Subway", 
-        "Wendy's"],
+        "Wendy's"
+    ],
     "Which is the largest mall in Hawaii?": ["Ala Moana Center", 
-    "Pearlridge Center", 
-    "Kahala Mall", 
-    "Windward Mall", 
-    "Royal Hawaiian Center"]
+        "Pearlridge Center", 
+        "Kahala Mall", 
+        "Windward Mall", 
+        "Royal Hawaiian Center"
+    ]
 }

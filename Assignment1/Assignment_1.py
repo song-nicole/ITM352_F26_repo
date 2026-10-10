@@ -16,10 +16,15 @@ scores = []
 
 QUESTIONS_PER_QUIZ = 5
 
+global hint
+
 num_questions = min(QUESTIONS_PER_QUIZ, len(questions))
 selected_questions = random.sample(list(questions.items()), num_questions)
 
-input("Welcome to the Hawaii Quiz! Press 'Enter' to begin. ")
+input("\nWelcome to the Hawaii Quiz! Press 'Enter' to begin. ")
+print("\nYou will be asked 5 questions about Hawaii.")
+print("\nTip! You can type 'hint' to eliminate 2 incorrect answers from the options.\n   *This feature can only be used once per quiz.")
+input("\nPress 'Enter' to start the quiz. ")
 
 def prepare_questions(questions, num_questions):
     num_questions = min(num_questions, len(questions))
@@ -28,18 +33,30 @@ def prepare_questions(questions, num_questions):
 
 def get_answer(question, alternatives):
     labeled_answers = dict(zip(ascii_lowercase, alternatives))
+    hint = False
 
     for label, answer in labeled_answers.items():
         print(f"{label}. {answer}")
         
-    while (answer_label := input("Choice? ").lower()) not in labeled_answers:
-        print(f"Invalid choice. Please select one of {', '.join(labeled_answers.keys())}.")
+    while (answer_label := input("Your answer: ").lower()) not in labeled_answers:
+        if answer_label == "hint" and hint == False:
+            hint = True
+            incorrect_answers = [ans for ans in alternatives if ans != correct_answer]
+            eliminated_answers = random.sample(incorrect_answers, 2)
+            print("\nHint: The following options have been eliminated:")
+            for eliminated in eliminated_answers:
+                print(f"- {eliminated}")
+            print()
+            continue
+        else:
+            print(f"Invalid choice. Please select one of {', '.join(labeled_answers.keys())}.")
 
     answer = labeled_answers.get(answer_label)
     return labeled_answers[answer_label]
 
 
-def ask_question(question, alternatives):    
+def ask_question(question, alternatives):
+    global correct_answer
     correct_answer = alternatives[0]
     ordered_alternatives = random.sample(alternatives, k=len(alternatives))
     answer = get_answer(question, ordered_alternatives)
@@ -54,7 +71,7 @@ def ask_question(question, alternatives):
 def play_again():
     replay = input("Would you like to play again? (y/n): ").lower()
     if replay == "y":
-        print("Starting a new game...")
+        print("\nStarting a new game...")
         operate()
     elif replay == "n":
         print("Thank you for playing!")
@@ -64,7 +81,7 @@ def play_again():
 
 # Ask user if they want to see their past scores
 def score_history():
-    past_scores = input("Would you like to see your past scores? (y/n): ").lower()
+    past_scores = input("\n \nWould you like to see your past scores? (y/n): ").lower()
     if past_scores == "y":
         print("Your past scores are:")
         for score in scores:
@@ -82,6 +99,7 @@ questions = prepare_questions(questions, QUESTIONS_PER_QUIZ)
 # Main Loop
 def operate():
     num_correct = 0
+    hint = False
 
     for num, (question, answers) in enumerate(questions, start=1):
         print(f"\nQuestion {num}: {question}")
