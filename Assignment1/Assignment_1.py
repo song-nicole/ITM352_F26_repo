@@ -13,6 +13,8 @@ question_file = open("questions.json", "r")
 questions = json.load(question_file)
 
 scores = []
+global highscore
+highscore = 0
 
 QUESTIONS_PER_QUIZ = 5
 
@@ -35,7 +37,8 @@ def get_answer(question, alternatives):
 
     for label, answer in labeled_answers.items():
         print(f"{label}. {answer}")
-        
+
+    # While loop that ensures the user input is valid and handles the 50/50 feature
     while (answer_label := input("Your answer: ").lower()) not in labeled_answers:
         if answer_label == "hint" and hint == False:
             hint = True
@@ -75,7 +78,7 @@ def play_again():
         print("\nStarting a new game...")
         operate()
     elif replay == "n":
-        print("Thank you for playing!")
+        print("\nThank you for playing!")
     else:
         print("Invalid input. Please enter 'y' or 'n'.")
         play_again()
@@ -85,8 +88,9 @@ def score_history():
     past_scores = input("\n \nWould you like to see your past scores? (y/n): ").lower()
     if past_scores == "y":
         print("Your past scores are:")
-        for score in scores:
-            print(score)
+        with open("scores.json", "r") as file:
+            scores = json.load(file)
+        print(scores)
         play_again()
     elif past_scores == "n":
         play_again()
@@ -97,18 +101,33 @@ def score_history():
 # Main program logic starts here
 questions = prepare_questions(questions, QUESTIONS_PER_QUIZ)
 
-# Main Loop
 def operate():
     num_correct = 0
+    global highscore
     global hint
     hint = False
 
+    # Main loop
     for num, (question, answers) in enumerate(questions, start=1):
         print(f"\nQuestion {num}: {question}")
         num_correct += ask_question(question, answers)
 
-    print(f"\nYou got {num_correct} correct.")
+    # Tell the user their final score and highest score
+    if num_correct > highscore:
+        highscore = num_correct
+        print(f"\nCongratulations! You have a new high score of {highscore}!")
+    else:
+        print(f"\nYou got {num_correct} correct.")
+        print(f"\nYour highest score is {highscore} correct answers.")
+
+    with open("scores.json", "r") as file:
+        scores = json.load(file)
+
     scores.append(num_correct)
+
+    with open("scores.json", "w") as file:
+        json.dump(scores, file)
+
 
     score_history()
 
