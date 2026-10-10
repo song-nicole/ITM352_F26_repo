@@ -7,14 +7,10 @@
 
 from string import ascii_lowercase
 import random
+import json
 
-questions = {
-    "What is the name of the tallest mountain in Hawaii?": ["Mauna Kea", "Koko Head", "Mauna Loa", "Kamakou", "Kawaikini"],
-    "What is Hawaii's state flower?": ["Yellow Hibiscus", "Plumeria", "Bird of Paradise", "Purple Orchid"],
-    "Which of the following is a native species in Hawaii?": ["White Tern", "Mongoose", "Chicken", "Gecko", "Myna Bird"],
-    "What is a popular resturant in the US that doesn't exist in Hawaii?": ["In-N-Out Burger", "Chick-fil-A", "Olive Garden", "Subway", "Wendy's"],
-    "Which is the largest mall in Hawaii?": ["Ala Moana Center", "Pearlridge Center", "Kahala Mall", "Windward Mall", "Royal Hawaiian Center"],
-}
+question_file = open("questions.json", "r")
+questions = json.load(question_file)
 
 scores = []
 
@@ -23,44 +19,43 @@ QUESTIONS_PER_QUIZ = 5
 num_questions = min(QUESTIONS_PER_QUIZ, len(questions))
 selected_questions = random.sample(list(questions.items()), num_questions)
 
-num_correct = 0
-
 input("Welcome to the Hawaii Quiz! Press 'Enter' to begin. ")
 
-# Number the questions starting from 1
-for num, (question, answer) in enumerate(questions.items(), start=1):
-    correct_answer = answer[0]  # The first answer in the list is the correct one
-    print(f"\nQuestion {num}: {question}")
+def prepare_questions(questions, num_questions):
+    num_questions = min(num_questions, len(questions))
+    return random.sample(list(questions.items()), k=num_questions)
 
-    # Sort the answers alphabetically
-    sorted_answers = sorted(answer)
-    # Label the answers with letters and randomize their order
-    labeled_answers = dict(zip(ascii_lowercase, random.sample(sorted_answers, k=len(sorted_answers))))
-    
+
+def get_answer(question, alternatives):
+    labeled_answers = dict(zip(ascii_lowercase, alternatives))
+
     for label, answer in labeled_answers.items():
         print(f"{label}. {answer}")
-
-    # Ensure the user selects a valid answer label that's within range
-    while (answer_label := input("Your answer: ").lower()) not in labeled_answers:
+        
+    while (answer_label := input("Choice? ").lower()) not in labeled_answers:
         print(f"Invalid choice. Please select one of {', '.join(labeled_answers.keys())}.")
 
     answer = labeled_answers.get(answer_label)
+    return labeled_answers[answer_label]
 
-    # Check if user's answer is correct
+
+def ask_question(question, alternatives):    
+    correct_answer = alternatives[0]
+    ordered_alternatives = random.sample(alternatives, k=len(alternatives))
+    answer = get_answer(question, ordered_alternatives)
     if answer == correct_answer:
         print("Correct!")
-        num_correct += 1
+        return 1
     else:
-        print(f"The answer is {correct_answer}, not {answer!r}.")
-
-print(f"\nYou got {num_correct} out of {len(questions)} correct.")
-scores.append(num_correct)
+        print(f"The answer is '{correct_answer!r}', not {answer!r}.")
+        return 0
 
 # Ask user if they want to play again
 def play_again():
     replay = input("Would you like to play again? (y/n): ").lower()
     if replay == "y":
         print("Starting a new game...")
+        operate()
     elif replay == "n":
         print("Thank you for playing!")
     else:
@@ -81,4 +76,20 @@ def score_history():
         print("Invalid input. Please enter 'y' or 'n'.")
         score_history()
 
-score_history()
+# Main program logic starts here
+questions = prepare_questions(questions, QUESTIONS_PER_QUIZ)
+
+# Main Loop
+def operate():
+    num_correct = 0
+
+    for num, (question, answers) in enumerate(questions, start=1):
+        print(f"\nQuestion {num}: {question}")
+        num_correct += ask_question(question, answers)
+
+    print(f"\nYou got {num_correct} correct.")
+    scores.append(num_correct)
+
+    score_history()
+
+operate()
