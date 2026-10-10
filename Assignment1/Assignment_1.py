@@ -16,14 +16,12 @@ scores = []
 
 QUESTIONS_PER_QUIZ = 5
 
-global hint
-
 num_questions = min(QUESTIONS_PER_QUIZ, len(questions))
 selected_questions = random.sample(list(questions.items()), num_questions)
 
 input("\nWelcome to the Hawaii Quiz! Press 'Enter' to begin. ")
 print("\nYou will be asked 5 questions about Hawaii.")
-print("\nTip! You can type 'hint' to eliminate 2 incorrect answers from the options.\n   *This feature can only be used once per quiz.")
+print("\nTip! You can type 'hint' to eliminate 2 incorrect answers from the options.\n   *The 50/50 feature can only be used once per quiz.")
 input("\nPress 'Enter' to start the quiz. ")
 
 def prepare_questions(questions, num_questions):
@@ -33,7 +31,7 @@ def prepare_questions(questions, num_questions):
 
 def get_answer(question, alternatives):
     labeled_answers = dict(zip(ascii_lowercase, alternatives))
-    hint = False
+    global hint
 
     for label, answer in labeled_answers.items():
         print(f"{label}. {answer}")
@@ -48,13 +46,16 @@ def get_answer(question, alternatives):
                 print(f"- {eliminated}")
             print()
             continue
+        elif answer_label == "hint" and hint == True:
+            print("You have already used the 50/50 feature. You cannot use it again.")
+            continue
         else:
             print(f"Invalid choice. Please select one of {', '.join(labeled_answers.keys())}.")
 
     answer = labeled_answers.get(answer_label)
     return labeled_answers[answer_label]
 
-
+# Function to ask a question and check the answer
 def ask_question(question, alternatives):
     global correct_answer
     correct_answer = alternatives[0]
@@ -99,6 +100,7 @@ questions = prepare_questions(questions, QUESTIONS_PER_QUIZ)
 # Main Loop
 def operate():
     num_correct = 0
+    global hint
     hint = False
 
     for num, (question, answers) in enumerate(questions, start=1):
