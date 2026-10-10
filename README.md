@@ -1,2 +1,2 @@
 # ITM352_F26_repo
-ITM 532 Repository for class exercises, assignments, and projects
+ITM 352 Repository for class exercises, assignments, and projects
