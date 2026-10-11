@@ -45,7 +45,7 @@ def get_answer(question, alternatives):
         print(f"{label}. {answer}")
 
     # While loop that ensures the user input is valid and handles the 50/50 feature
-    while (answer_label := input("\nYour answer: ").lower()) not in labeled_answers:
+    while (answer_label := input("\nYour answer: ").lower().strip()) not in labeled_answers:
         if answer_label == "eliminate" and eliminate == False:
             eliminate = True
             incorrect_answers = [ans for ans in alternatives if ans != correct_answer]
