@@ -1,0 +1,714 @@
+
+Welcome to the Hawaii Quiz! Press 'Enter' to begin. 
+
+You will be asked 5 questions about Hawaii.
+
+Tip! You can type 'eliminate' to eliminate 2 incorrect answers from the options.
+   *The 50/50 feature can only be used once per quiz.
+
+Tip! You can type 'score' to see your current score at any time during the quiz.
+
+Press 'Enter' to start the quiz. 
+
+Question 1: What is Hawaii's state flower?
+a. Yellow Hibiscus
+b. Purple Orchid
+c. Plumeria
+d. Bird of Paradise
+
+Your answer: 
+Invalid choice. Please select one of a, b, c, d.
+
+Your answer: d
+The answer is ''Yellow Hibiscus'', not 'Bird of Paradise'.
+
+Question 2: What is the most popular hike in Hawaii?
+a. Diamond Head
+b. Manoa Falls
+c. Koko Crater
+d. Makapu'u Point
+
+Your answer: b
+The answer is ''Diamond Head'', not 'Manoa Falls'.
+
+Question 3: What is the name of the beach in this image?
+View the image here: https://cdn.hawaiiguide.io/images/jcogs_img/cache/waikiki-things-to-do_-_abcdef_-_e5537d5e433635ad5dd9d4d859bd69b2d16d7393.jpg
+a. Kailua Beach
+b. Lanikai Beach
+c. Waikiki Beach
+d. Hanauma Bay
+
+Your answer: a
+The answer is ''Waikiki Beach'', not 'Kailua Beach'.
+
+Question 4: What is the name of the animal in this image?
+View the image here: https://dlnr.hawaii.gov/wildlife/files/2025/09/Nene-Portrait.jpg
+a. Hawaiian Goose
+b. Duck
+c. Swan
+d. Canada Goose
+e. Barnacle Goose
+
+Your answer: b
+The answer is ''Hawaiian Goose'', not 'Duck'.
+
+Question 5: Which hawaiian island is known for its active volcanoes?
+a. Kauai
+b. Big Island
+c. Oahu
+d. Maui
+
+Your answer: a
+The answer is ''Big Island'', not 'Kauai'.
+
+You got 0 out of 5 correct.
+
+ 
+Would you like to see your past scores? (y/n): n
+
+Would you like to play again? (y/n): y
+
+Starting a new game...
+
+Question 1: What is the name of the beach in this image?
+View the image here: https://cdn.hawaiiguide.io/images/jcogs_img/cache/waikiki-things-to-do_-_abcdef_-_e5537d5e433635ad5dd9d4d859bd69b2d16d7393.jpg
+a. Kailua Beach
+b. Lanikai Beach
+c. Waikiki Beach
+d. Hanauma Bay
+
+Your answer: ELIminate
+
+The following options have been eliminated:
+- Lanikai Beach
+- Hanauma Bay
+
+
+Your answer: eliminate
+You have already used the 50/50 feature. You cannot use it again.
+
+Your answer: c
+Correct!
+
+Question 2: What is a popular resturant in the US that doesn't exist in Hawaii?
+a. Subway
+b. In-N-Out Burger
+c. Wendy's
+d. Olive Garden
+e. Chick-fil-A
+
+Your answer: eliminate
+You have already used the 50/50 feature. You cannot use it again.
+
+Your answer: score
+
+Your current score is 1 out of 5.
+
+Your answer: a
+The answer is ''In-N-Out Burger'', not 'Subway'.
+
+Question 3: What is the name of this mall?
+View the image here: https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg
+a. Royal Hawaiian Center
+b. Pearlridge Center
+c. Ala Moana Center
+d. Kahala Mall
+e. Windward Mall
+
+Your answer: c
+Correct!
+
+Question 4: Which is the largest mall in Hawaii?
+a. Royal Hawaiian Center
+b. Kahala Mall
+c. Windward Mall
+d. Ala Moana Center
+e. Pearlridge Center
+
+Your answer: sCOre
+
+Your current score is 2 out of 5.
+
+Your answer: d
+Correct!
+
+Question 5: What is the name of a famous person born in Hawaii?
+a. Ariana Grande
+b. Bruno Mars
+c. Tom Cruise
+d. Taylor Swift
+e. Dwayne Johnson
+
+Your answer: ELIMINAte
+You have already used the 50/50 feature. You cannot use it again.
+
+Your answer: a
+The answer is ''Bruno Mars'', not 'Ariana Grande'.
+
+You got 3 out of 5 correct.
+
+Congratulations! You have a new high score of 3!
+
+ 
+Would you like to see your past scores? (y/n): y
+
+Your past scores are:
+[4, 5, 4, 0, 3]
+
+Would you like to play again? (y/n): y
+
+Starting a new game...
+
+Question 1: What is the name of this mall?
+View the image here: https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg
+a. Windward Mall
+b. Pearlridge Center
+c. Kahala Mall
+d. Ala Moana Center
+e. Royal Hawaiian Center
+
+Your answer: a
+The answer is ''Ala Moana Center'', not 'Windward Mall'.
+
+Question 2: What is the name of the tallest mountain in Hawaii?
+a. Mauna Loa
+b. Mauna Kea
+c. Kamakou
+d. Koko Head
+
+Your answer: a
+The answer is ''Mauna Kea'', not 'Mauna Loa'.
+
+Question 3: What is a popular resturant in the US that doesn't exist in Hawaii?
+a. Olive Garden
+b. Chick-fil-A
+c. Wendy's
+d. In-N-Out Burger
+e. Subway
+
+Your answer: a
+The answer is ''In-N-Out Burger'', not 'Olive Garden'.
+
+Question 4: What is Hawaii's state flower?
+a. Bird of Paradise
+b. Yellow Hibiscus
+c. Plumeria
+d. Purple Orchid
+
+Your answer: a
+The answer is ''Yellow Hibiscus'', not 'Bird of Paradise'.
+
+Question 5: Which is the largest mall in Hawaii?
+a. Royal Hawaiian Center
+b. Ala Moana Center
+c. Kahala Mall
+d. Windward Mall
+e. Pearlridge Center
+
+Your answer: a
+The answer is ''Ala Moana Center'', not 'Royal Hawaiian Center'.
+
+You got 0 out of 5 correct.
+
+Your highest score is 3 correct answers.
+
+ 
+Would you like to see your past scores? (y/n): n
+
+Would you like to play again? (y/n): n
+
+Thank you for playing!
+ 
+
+N:Assignment1 nicolesong$ python3 Assignment_1.py
+
+Welcome to the Hawaii Quiz! Press 'Enter' to begin. 
+
+You will be asked 5 questions about Hawaii.
+
+Tip! You can type 'eliminate' to eliminate 2 incorrect answers from the options.
+   *The 50/50 feature can only be used once per quiz.
+
+Tip! You can type 'score' to see your current score at any time during the quiz.
+
+Press 'Enter' to start the quiz. 
+
+Question 1: What is the name of the beach in this image?
+View the image here: https://cdn.hawaiiguide.io/images/jcogs_img/cache/waikiki-things-to-do_-_abcdef_-_e5537d5e433635ad5dd9d4d859bd69b2d16d7393.jpg
+a. Kailua Beach
+b. Waikiki Beach
+c. Hanauma Bay
+d. Lanikai Beach
+
+Your answer: a
+The answer is ''Waikiki Beach'', not 'Kailua Beach'.
+
+Question 2: What is the name of this mall?
+View the image here: https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg
+a. Royal Hawaiian Center
+b. Pearlridge Center
+c. Windward Mall
+d. Ala Moana Center
+e. Kahala Mall
+
+Your answer: a
+The answer is ''Ala Moana Center'', not 'Royal Hawaiian Center'.
+
+Question 3: What is the name of the animal in this image?
+View the image here: https://dlnr.hawaii.gov/wildlife/files/2025/09/Nene-Portrait.jpg
+a. Barnacle Goose
+b. Canada Goose
+c. Hawaiian Goose
+d. Duck
+e. Swan
+
+Your answer: e
+The answer is ''Hawaiian Goose'', not 'Swan'.
+
+Question 4: Which is the largest mall in Hawaii?
+a. Kahala Mall
+b. Pearlridge Center
+c. Ala Moana Center
+d. Royal Hawaiian Center
+e. Windward Mall
+
+Your answer: b
+The answer is ''Ala Moana Center'', not 'Pearlridge Center'.
+
+Question 5: What is Hawaii's state flower?
+a. Plumeria
+b. Bird of Paradise
+c. Purple Orchid
+d. Yellow Hibiscus
+
+Your answer: C
+The answer is ''Yellow Hibiscus'', not 'Purple Orchid'.
+
+You got 0 out of 5 correct.
+
+ 
+Would you like to see your past scores? (y/n): y
+
+Your past scores are:
+[0]
+
+Would you like to play again? (y/n): y
+
+Starting a new game...
+
+Question 1: What is Hawaii's state flower?
+a. Plumeria
+b. Bird of Paradise
+c. Yellow Hibiscus
+d. Purple Orchid
+
+Your answer: idk..
+Invalid choice. Please select one of a, b, c, d.
+
+Your answer: eliminate
+
+The following options have been eliminated:
+- Plumeria
+- Purple Orchid
+
+
+Your answer: b
+The answer is ''Yellow Hibiscus'', not 'Bird of Paradise'.
+
+Question 2: Which is the largest mall in Hawaii?
+a. Pearlridge Center
+b. Ala Moana Center
+c. Windward Mall
+d. Royal Hawaiian Center
+e. Kahala Mall
+
+Your answer: score
+
+Your current score is 0 out of 5.
+
+Your answer: eliminate
+You have already used the 50/50 feature. You cannot use it again.
+
+Your answer: a
+The answer is ''Ala Moana Center'', not 'Pearlridge Center'.
+
+Question 3: What is the name of the tallest mountain in Hawaii?
+a. Kamakou
+b. Koko Head
+c. Mauna Kea
+d. Mauna Loa
+
+Your answer: ELIMINATE
+You have already used the 50/50 feature. You cannot use it again.
+
+Your answer: b
+The answer is ''Mauna Kea'', not 'Koko Head'.
+
+Question 4: What is the name of the beach in this image?
+View the image here: https://cdn.hawaiiguide.io/images/jcogs_img/cache/waikiki-things-to-do_-_abcdef_-_e5537d5e433635ad5dd9d4d859bd69b2d16d7393.jpg
+a. Kailua Beach
+b. Lanikai Beach
+c. Hanauma Bay
+d. Waikiki Beach
+
+Your answer: d 
+Correct!
+
+Question 5: What is the name of Hawaii's state bird?
+a. Nene
+b. I'iwi
+c. Pueo
+d. Apapane
+
+Your answer: score
+
+Your current score is 1 out of 5.
+
+Your answer: eliminate!!
+Invalid choice. Please select one of a, b, c, d.
+
+Your answer: D
+The answer is ''Nene'', not 'Apapane'.
+
+You got 1 out of 5 correct.
+
+Congratulations! You have a new high score of 1!
+
+ 
+Would you like to see your past scores? (y/n): y
+
+Your past scores are:
+[0, 1]
+
+Would you like to play again? (y/n): y
+
+Starting a new game...
+
+Question 1: Which of the following is a native species in Hawaii?
+a. Mongoose
+b. Chicken
+c. Gecko
+d. White Tern
+
+Your answer: d
+Correct!
+
+Question 2: What is the most popular hike in Hawaii?
+a. Makapu'u Point
+b. Manoa Falls
+c. Koko Crater
+d. Diamond Head
+
+Your answer: n
+Invalid choice. Please select one of a, b, c, d.
+
+Your answer:       elimiNAte
+
+The following options have been eliminated:
+- Makapu'u Point
+- Koko Crater
+
+
+Your answer: d
+Correct!
+
+Question 3: What is the name of the animal in this image?
+View the image here: https://dlnr.hawaii.gov/wildlife/files/2025/09/Nene-Portrait.jpg
+a. Barnacle Goose
+b. Canada Goose
+c. Swan
+d. Hawaiian Goose
+e. Duck
+
+Your answer: score
+
+Your current score is 2 out of 5.
+
+Your answer: score
+
+Your current score is 2 out of 5.
+
+Your answer: a
+The answer is ''Hawaiian Goose'', not 'Barnacle Goose'.
+
+Question 4: What is the name of the beach in this image?
+View the image here: https://cdn.hawaiiguide.io/images/jcogs_img/cache/waikiki-things-to-do_-_abcdef_-_e5537d5e433635ad5dd9d4d859bd69b2d16d7393.jpg
+a. Kailua Beach
+b. Hanauma Bay
+c. Lanikai Beach
+d. Waikiki Beach
+
+Your answer: score
+
+Your current score is 2 out of 5.
+
+Your answer: d
+Correct!
+
+Question 5: What is the name of the tallest mountain in Hawaii?
+a. Mauna Kea
+b. Kamakou
+c. Mauna Loa
+d. Koko Head
+
+Your answer: eliminate
+You have already used the 50/50 feature. You cannot use it again.
+
+Your answer: a
+Correct!
+
+You got 4 out of 5 correct.
+
+Congratulations! You have a new high score of 4!
+
+ 
+Would you like to see your past scores? (y/n): n
+
+Would you like to play again? (y/n): k
+Invalid input. Please enter 'y' or 'n'.
+
+Would you like to play again? (y/n): y
+
+Starting a new game...
+
+Question 1: What is the name of a famous person born in Hawaii?
+a. Bruno Mars
+b. Ariana Grande
+c. Tom Cruise
+d. Taylor Swift
+e. Dwayne Johnson
+
+Your answer: 
+Invalid choice. Please select one of a, b, c, d, e.
+
+Your answer: ELIMInate   
+
+The following options have been eliminated:
+- Dwayne Johnson
+- Taylor Swift
+
+
+Your answer: A
+Correct!
+
+Question 2: Which is the largest mall in Hawaii?
+a. Pearlridge Center
+b. Windward Mall
+c. Ala Moana Center
+d. Royal Hawaiian Center
+e. Kahala Mall
+
+Your answer:     C
+Correct!
+
+Question 3: What is the most popular hike in Hawaii?
+a. Koko Crater
+b. Makapu'u Point
+c. Diamond Head
+d. Manoa Falls
+
+Your answer: score
+
+Your current score is 2 out of 5.
+
+Your answer:       eLIMinate
+You have already used the 50/50 feature. You cannot use it again.
+
+Your answer: a
+The answer is ''Diamond Head'', not 'Koko Crater'.
+
+Question 4: What is the name of this mall?
+View the image here: https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg
+a. Royal Hawaiian Center
+b. Windward Mall
+c. Ala Moana Center
+d. Kahala Mall
+e. Pearlridge Center
+
+Your answer: c
+Correct!
+
+Question 5: What is the name of the animal in this image?
+View the image here: https://dlnr.hawaii.gov/wildlife/files/2025/09/Nene-Portrait.jpg
+a. Canada Goose
+b. Barnacle Goose
+c. Swan
+d. Hawaiian Goose
+e. Duck
+
+Your answer: d
+Correct!
+
+You got 4 out of 5 correct.
+
+Your highest score is 4 correct answers.
+
+ 
+Would you like to see your past scores? (y/n): n
+
+Would you like to play again? (y/n): y
+
+Starting a new game...
+
+Question 1: What is the name of this mall?
+View the image here: https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg
+a. Ala Moana Center
+b. Kahala Mall
+c. Royal Hawaiian Center
+d. Pearlridge Center
+e. Windward Mall
+
+Your answer: a
+Correct!
+
+Question 2: What is the name of a famous person born in Hawaii?
+a. Ariana Grande
+b. Dwayne Johnson
+c. Taylor Swift
+d. Bruno Mars
+e. Tom Cruise
+
+Your answer:    eliminate
+
+The following options have been eliminated:
+- Tom Cruise
+- Ariana Grande
+
+
+Your answer: d
+Correct!
+
+Question 3: What is the name of the animal in this image?
+View the image here: https://dlnr.hawaii.gov/wildlife/files/2025/09/Nene-Portrait.jpg
+a. Hawaiian Goose
+b. Duck
+c. Canada Goose
+d. Swan
+e. Barnacle Goose
+
+Your answer:   B
+The answer is ''Hawaiian Goose'', not 'Duck'.
+
+Question 4: What is the name of the beach in this image?
+View the image here: https://cdn.hawaiiguide.io/images/jcogs_img/cache/waikiki-things-to-do_-_abcdef_-_e5537d5e433635ad5dd9d4d859bd69b2d16d7393.jpg
+a. Waikiki Beach
+b. Kailua Beach
+c. Lanikai Beach
+d. Hanauma Bay
+
+Your answer: W
+Invalid choice. Please select one of a, b, c, d.
+
+Your answer: a
+Correct!
+
+Question 5: What is a popular resturant in the US that doesn't exist in Hawaii?
+a. Olive Garden
+b. Subway
+c. In-N-Out Burger
+d. Chick-fil-A
+e. Wendy's
+
+Your answer: c
+Correct!
+
+You got 4 out of 5 correct.
+
+Your highest score is 4 correct answers.
+
+ 
+Would you like to see your past scores? (y/n): no
+Invalid input. Please enter 'y' or 'n'.
+
+ 
+Would you like to see your past scores? (y/n): ..
+Invalid input. Please enter 'y' or 'n'.
+
+ 
+Would you like to see your past scores? (y/n): n
+
+Would you like to play again? (y/n): y
+
+Starting a new game...
+
+Question 1: Which of the following is a native species in Hawaii?
+a. Gecko
+b. Mongoose
+c. Chicken
+d. White Tern
+
+Your answer: d
+Correct!
+
+Question 2: What is the name of a famous person born in Hawaii?
+a. Dwayne Johnson
+b. Bruno Mars
+c. Taylor Swift
+d. Ariana Grande
+e. Tom Cruise
+
+Your answer: eliminate 
+
+The following options have been eliminated:
+- Tom Cruise
+- Ariana Grande
+
+
+Your answer: b
+Correct!
+
+Question 3: What is a popular resturant in the US that doesn't exist in Hawaii?
+a. Subway
+b. Chick-fil-A
+c. In-N-Out Burger
+d. Olive Garden
+e. Wendy's
+
+Your answer: score
+
+Your current score is 2 out of 5.
+
+Your answer: c
+Correct!
+
+Question 4: Which is the largest mall in Hawaii?
+a. Ala Moana Center
+b. Pearlridge Center
+c. Kahala Mall
+d. Windward Mall
+e. Royal Hawaiian Center
+
+Your answer: score
+
+Your current score is 3 out of 5.
+
+Your answer: a
+Correct!
+
+Question 5: What is the name of Hawaii's state bird?
+a. Nene
+b. I'iwi
+c. Apapane
+d. Pueo
+
+Your answer: a
+Correct!
+
+You got 5 out of 5 correct.
+
+Congratulations! You have a new high score of 5!
+
+ 
+Would you like to see your past scores? (y/n): yes
+Invalid input. Please enter 'y' or 'n'.
+
+ 
+Would you like to see your past scores? (y/n): y
+
+Your past scores are:
+[0, 1, 4, 4, 4, 5]
+
+Would you like to play again? (y/n): n
+
+Thank you for playing!
+ 
