@@ -59,7 +59,7 @@ def get_answer(question, alternatives):
             print("You have already used the 50/50 feature. You cannot use it again.")
             continue
         elif answer_label == "score":
-            print(f"\nYour current score is {num_correct} out of {len(all_questions)}.")
+            print(f"\nYour current score is {num_correct} out of {num_questions}.")
             continue
         else:
             print(f"Invalid choice. Please select one of {', '.join(labeled_answers.keys())}.")

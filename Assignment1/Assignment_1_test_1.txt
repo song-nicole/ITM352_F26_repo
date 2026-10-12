@@ -8,314 +8,230 @@ Tip! You can type 'eliminate' to eliminate 2 incorrect answers from the options.
 
 Tip! You can type 'score' to see your current score at any time during the quiz.
 
-Press 'Enter' to start the quiz. a
+Press 'Enter' to start the quiz. 
 
 Question 1: Which hawaiian island is known for its active volcanoes?
-a. Maui
+a. Oahu
 b. Big Island
-c. Oahu
-d. Kauai
+c. Kauai
+d. Maui
 
 Your answer: b
 Correct!
 
-Question 2: What is the name of a famous person born in Hawaii?
-a. Tom Cruise
-b. Ariana Grande
-c. Dwayne Johnson
-d. Bruno Mars
-e. Taylor Swift
+Question 2: What is a popular resturant in the US that doesn't exist in Hawaii?
+a. Subway
+b. Chick-fil-A
+c. In-N-Out Burger
+d. Wendy's
+e. Olive Garden
 
-Your answer: a
-The answer is ''Bruno Mars'', not 'Tom Cruise'.
-
-Question 3: What is Hawaii's state flower?
-a. Yellow Hibiscus
-b. Bird of Paradise
-c. Purple Orchid
-d. Plumeria
-
-Your answer: score
-
-Your current score is 1 out of 5.
-
-Your answer: score
-
-Your current score is 1 out of 5.
-
-Your answer: eliminate
-
-The following options have been eliminated:
-- Bird of Paradise
-- Purple Orchid
-
-
-Your answer: a
+Your answer: c
 Correct!
 
-Question 4: Which of the following is a native species in Hawaii?
-a. Chicken
-b. White Tern
-c. Mongoose
-d. Gecko
+Question 3: What is the name of a famous person born in Hawaii?
+a. Dwayne Johnson
+b. Ariana Grande
+c. Bruno Mars
+d. Tom Cruise
+e. Taylor Swift
 
 Your answer: score
 
 Your current score is 2 out of 5.
 
-Your answer: b
-Correct!
-
-Question 5: What is the name of the tallest mountain in Hawaii?
-a. Koko Head
-b. Mauna Kea
-c. Mauna Loa
-d. Kamakou
-
-Your answer: eliminate
-You have already used the 50/50 feature. You cannot use it again.
-
-Your answer: eliminate
-You have already used the 50/50 feature. You cannot use it again.
-
-Your answer: a
-The answer is ''Mauna Kea'', not 'Koko Head'.
-
-Congratulations! You have a new high score of 3!
-
- 
-Would you like to see your past scores? (y/n): y
-
-Your past scores are:
-[3]
-
-Would you like to play again? (y/n): y
-
-Starting a new game...
-
-Question 1: Which hawaiian island is known for its active volcanoes?
-a. Maui
-b. Big Island
-c. Kauai
-d. Oahu
-
-Your answer: s
-Invalid choice. Please select one of a, b, c, d.
-
-Your answer: score
-
-Your current score is 0 out of 5.
-
-Your answer: b
-Correct!
-
-Question 2: What is the name of a famous person born in Hawaii?
-a. Bruno Mars
-b. Taylor Swift
-c. Dwayne Johnson
-d. Ariana Grande
-e. Tom Cruise
-
-Your answer: a
-Correct!
-
-Question 3: What is Hawaii's state flower?
-a. Yellow Hibiscus
-b. Plumeria
-c. Purple Orchid
-d. Bird of Paradise
-
-Your answer: a
-Correct!
-
-Question 4: Which of the following is a native species in Hawaii?
-a. Mongoose
-b. Chicken
-c. White Tern
-d. Gecko
-
 Your answer: eliminate
 
 The following options have been eliminated:
-- Mongoose
-- Chicken
-
-
-Your answer: score
-
-Your current score is 3 out of 5.
-
-Your answer: c
-Correct!
-
-Question 5: What is the name of the tallest mountain in Hawaii?
-a. Mauna Loa
-b. Mauna Kea
-c. Koko Head
-d. Kamakou
-
-Your answer: f
-Invalid choice. Please select one of a, b, c, d.
-
-Your answer: eliminate
-You have already used the 50/50 feature. You cannot use it again.
-
-Your answer: b
-Correct!
-
-Congratulations! You have a new high score of 5!
-
- 
-Would you like to see your past scores? (y/n): y
-
-Your past scores are:
-[3, 5]
-
-Would you like to play again? (y/n): a
-Invalid input. Please enter 'y' or 'n'.
-
-Would you like to play again? (y/n): y
-
-Starting a new game...
-
-Question 1: Which hawaiian island is known for its active volcanoes?
-a. Big Island
-b. Maui
-c. Oahu
-d. Kauai
-
-Your answer: a
-Correct!
-
-Question 2: What is the name of a famous person born in Hawaii?
-a. Taylor Swift
-b. Ariana Grande
-c. Dwayne Johnson
-d. Bruno Mars
-e. Tom Cruise
-
-Your answer: ELIminaTe  
-
-The following options have been eliminated:
-- Tom Cruise
+- Taylor Swift
 - Ariana Grande
 
 
-Your answer: d
-Correct!
-
-Question 3: What is Hawaii's state flower?
-a. Plumeria
-b. Purple Orchid
-c. Yellow Hibiscus
-d. Bird of Paradise
-
-Your answer: n/a
-Invalid choice. Please select one of a, b, c, d.
-
-Your answer: idk
-Invalid choice. Please select one of a, b, c, d.
-
-Your answer: c
-Correct!
+Your answer: a
+The answer is ''Bruno Mars'', not 'Dwayne Johnson'.
 
 Question 4: Which of the following is a native species in Hawaii?
-a. Mongoose
-b. Gecko
-c. White Tern
-d. Chicken
+a. Chicken
+b. Mongoose
+c. Gecko
+d. White Tern
+
+Your answer: eliminate
+You have already used the 50/50 feature. You cannot use it again.
 
 Your answer: score
 
-Your current score is 3 out of 5.
+Your current score is 2 out of 5.
+
+Your answer: d
+Correct!
+
+Question 5: What is the name of this mall?
+View the image here: https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg
+a. Ala Moana Center
+b. Pearlridge Center
+c. Kahala Mall
+d. Royal Hawaiian Center
+e. Windward Mall
+
+Your answer: idk
+Invalid choice. Please select one of a, b, c, d, e.
+
+Your answer: ?
+Invalid choice. Please select one of a, b, c, d, e.
 
 Your answer: a
-The answer is ''White Tern'', not 'Mongoose'.
+Correct!
 
-Question 5: What is the name of the tallest mountain in Hawaii?
-a. Koko Head
-b. Kamakou
-c. Mauna Kea
-d. Mauna Loa
+You got 4 out of 5 correct.
 
-Your answer: b
-The answer is ''Mauna Kea'', not 'Kamakou'.
-
-You got 3 correct.
-
-Your highest score is 5 correct answers.
+Congratulations! You have a new high score of 4!
 
  
-Would you like to see your past scores? (y/n): n
+Would you like to see your past scores? (y/n): y
 
-Would you like to play again? (y/n): yes
-Invalid input. Please enter 'y' or 'n'.
+Your past scores are:
+[4]
 
 Would you like to play again? (y/n): y
 
 Starting a new game...
 
 Question 1: Which hawaiian island is known for its active volcanoes?
-a. Oahu
-b. Maui
-c. Kauai
-d. Big Island
+a. Kauai
+b. Oahu
+c. Big Island
+d. Maui
 
-Your answer: d
+Your answer: Oahu?
+Invalid choice. Please select one of a, b, c, d.
+
+Your answer: c
 Correct!
 
-Question 2: What is the name of a famous person born in Hawaii?
-a. Bruno Mars
-b. Dwayne Johnson
-c. Ariana Grande
-d. Taylor Swift
-e. Tom Cruise
-
-Your answer: k
-Invalid choice. Please select one of a, b, c, d, e.
+Question 2: What is the name of this mall?
+View the image here: https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg
+a. Windward Mall
+b. Royal Hawaiian Center
+c. Kahala Mall
+d. Ala Moana Center
+e. Pearlridge Center
 
 Your answer: score
 
 Your current score is 1 out of 5.
 
-Your answer: e
-The answer is ''Bruno Mars'', not 'Tom Cruise'.
+Your answer: D
+Correct!
 
-Question 3: What is Hawaii's state flower?
-a. Bird of Paradise
-b. Plumeria
-c. Yellow Hibiscus
-d. Purple Orchid
-
-Your answer: b
-The answer is ''Yellow Hibiscus'', not 'Plumeria'.
-
-Question 4: Which of the following is a native species in Hawaii?
-a. Mongoose
-b. Gecko
-c. White Tern
-d. Chicken
-
-Your answer: B  
-The answer is ''White Tern'', not 'Gecko'.
-
-Question 5: What is the name of the tallest mountain in Hawaii?
+Question 3: What is the name of the tallest mountain in Hawaii?
 a. Kamakou
-b. Mauna Kea
+b. Koko Head
 c. Mauna Loa
-d. Koko Head
+d. Mauna Kea
 
-Your answer: Eliminate
+Your answer: ELIMINATE
 
 The following options have been eliminated:
-- Mauna Loa
 - Kamakou
+- Mauna Loa
+
+
+Your answer: d
+Correct!
+
+Question 4: What is the name of a famous person born in Hawaii?
+a. Dwayne Johnson
+b. Ariana Grande
+c. Taylor Swift
+d. Tom Cruise
+e. Bruno Mars
+
+Your answer: e
+Correct!
+
+Question 5: What is a popular resturant in the US that doesn't exist in Hawaii?
+a. In-N-Out Burger
+b. Chick-fil-A
+c. Olive Garden
+d. Subway
+e. Wendy's
+
+Your answer: a
+Correct!
+
+You got 5 out of 5 correct.
+
+Congratulations! You have a new high score of 5!
+
+ 
+Would you like to see your past scores? (y/n): n
+
+Would you like to play again? (y/n): y
+
+Starting a new game...
+
+Question 1: What is the name of this mall?
+View the image here: https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg
+a. Kahala Mall
+b. Windward Mall
+c. Royal Hawaiian Center
+d. Ala Moana Center
+e. Pearlridge Center
+
+Your answer: score
+
+Your current score is 0 out of 5.
+
+Your answer: a
+The answer is ''Ala Moana Center'', not 'Kahala Mall'.
+
+Question 2: Which of the following is a native species in Hawaii?
+a. Gecko
+b. White Tern
+c. Chicken
+d. Mongoose
+
+Your answer:    eliminate
+
+The following options have been eliminated:
+- Mongoose
+- Gecko
 
 
 Your answer: b
 Correct!
 
-You got 2 correct.
+Question 3: Which is the largest mall in Hawaii?
+a. Kahala Mall
+b. Windward Mall
+c. Ala Moana Center
+d. Royal Hawaiian Center
+e. Pearlridge Center
+
+Your answer: c
+Correct!
+
+Question 4: What is the most popular hike in Hawaii?
+a. Koko Crater
+b. Diamond Head
+c. Manoa Falls
+d. Makapu'u Point
+
+Your answer: b
+Correct!
+
+Question 5: What is the name of the beach in this image?
+View the image here: https://cdn.hawaiiguide.io/images/jcogs_img/cache/waikiki-things-to-do_-_abcdef_-_e5537d5e433635ad5dd9d4d859bd69b2d16d7393.jpg
+a. Lanikai Beach
+b. Waikiki Beach
+c. Hanauma Bay
+d. Kailua Beach
+
+Your answer: b
+Correct!
+
+You got 4 out of 5 correct.
 
 Your highest score is 5 correct answers.
 
@@ -323,7 +239,7 @@ Your highest score is 5 correct answers.
 Would you like to see your past scores? (y/n): y
 
 Your past scores are:
-[3, 5, 3, 2]
+[4, 5, 4]
 
 Would you like to play again? (y/n): n
 
