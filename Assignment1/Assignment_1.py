@@ -1,5 +1,5 @@
 # Name: Nicole Song
-# Date: Oct. 10, 2026
+# Date: Oct. 11, 2026
 
 # Assignment: Create a quiz that asks the user at least 5 multiple choice questions and present at least 4 options
 # Requiremnt 1: Write the history of scores out to a file
@@ -128,9 +128,12 @@ def operate():
     # Tell the user their final score and highest score
     if num_correct > highscore:
         highscore = num_correct
+        print(f"\nYou got {num_correct} out of {num_questions} correct.")
         print(f"\nCongratulations! You have a new high score of {highscore}!")
+    elif highscore == 0:
+        print(f"\nYou got {num_correct} out of {num_questions} correct.")
     else:
-        print(f"\nYou got {num_correct} correct.")
+        print(f"\nYou got {num_correct} out of {num_questions} correct.")
         print(f"\nYour highest score is {highscore} correct answers.")
 
     # Add score to the scores.json file

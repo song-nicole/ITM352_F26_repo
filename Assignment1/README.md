@@ -1,3 +1,6 @@
+Name: Nicole Song
+Last update: October 11, 2026
+
 ● Data Structure Justification: What data structure design was used to store the quiz questions and why is the best for the application? Explain the design quality goals for this? E.g. readability by human, easy to read from a file, etc. Do not simply list the goals. Explain them relative to storing quiz questions.
 
 A dictionary is used because it ensures that the questions and the answer options are stored together. The key value pairs help with organization, allowing you to easily keep track of which questions are associated with which answer options. It allows both the human reader and the computer to instantly see the question and the associated answers without needing to search through the entire program. In addition, it is also formatted like a traditional multiple choice quiz that many are familiar with.
