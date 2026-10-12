@@ -5,6 +5,7 @@
 # Requiremnt 1: Write the history of scores out to a file
 # Requiremnt 2: Add a 50/50 feature that eliminates 2 incorrect answers from the options (this feature can only be used once per quiz)
 # Extra credit: Notify the user when they get a new high score
+# Extra extra credit: Allow for images or videos as questions, rather than just text
 
 # Used Assignment 1 Workshop V7 as a base and added additional features
 
@@ -13,7 +14,7 @@ import random
 import json
 
 question_file = open("questions.json", "r")
-questions = json.load(question_file)
+all_questions = json.load(question_file)
 
 scores = []
 global highscore
@@ -21,9 +22,7 @@ highscore = 0
 
 QUESTIONS_PER_QUIZ = 5
 
-num_questions = min(QUESTIONS_PER_QUIZ, len(questions))
-# Randomizes the order of the questions
-selected_questions = random.sample(list(questions.items()), num_questions)
+num_questions = min(QUESTIONS_PER_QUIZ, len(all_questions))
 
 # Game introduction
 input("\nWelcome to the Hawaii Quiz! Press 'Enter' to begin. ")
@@ -60,7 +59,7 @@ def get_answer(question, alternatives):
             print("You have already used the 50/50 feature. You cannot use it again.")
             continue
         elif answer_label == "score":
-            print(f"\nYour current score is {num_correct} out of {len(questions)}.")
+            print(f"\nYour current score is {num_correct} out of {len(all_questions)}.")
             continue
         else:
             print(f"Invalid choice. Please select one of {', '.join(labeled_answers.keys())}.")
@@ -111,7 +110,6 @@ def score_history():
         score_history()
 
 # Main program logic starts here
-questions = prepare_questions(questions, QUESTIONS_PER_QUIZ)
 
 def operate():
     global num_correct
@@ -120,9 +118,18 @@ def operate():
     global eliminate
     eliminate = False
 
+    quiz_questions = prepare_questions(all_questions, QUESTIONS_PER_QUIZ)
+
     # Main loop
-    for num, (question, answers) in enumerate(questions, start=1):
+    for num, (question, question_data) in enumerate(quiz_questions, start=1):
         print(f"\nQuestion {num}: {question}")
+
+        if isinstance(question_data, dict):
+            print(f"View the image here: {question_data['image']}")
+            answers = question_data["answers"]
+        else:
+            answers = question_data
+
         num_correct += ask_question(question, answers)
 
     # Tell the user their final score and highest score

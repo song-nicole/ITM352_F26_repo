@@ -54,5 +54,34 @@
         "Koko Crater", 
         "Manoa Falls", 
         "Makapu'u Point"
-    ]
+    ],
+    "What is the name of the beach in this image?": {
+        "image": "https://cdn.hawaiiguide.io/images/jcogs_img/cache/waikiki-things-to-do_-_abcdef_-_e5537d5e433635ad5dd9d4d859bd69b2d16d7393.jpg",
+        "answers": [
+            "Waikiki Beach", 
+            "Lanikai Beach", 
+            "Hanauma Bay", 
+            "Kailua Beach"
+        ]
+    },
+    "What is the name of the animal in this image?": {
+        "image": "https://dlnr.hawaii.gov/wildlife/files/2025/09/Nene-Portrait.jpg",
+        "answers": [
+            "Hawaiian Goose",
+            "Duck",
+            "Canada Goose",
+            "Barnacle Goose",
+            "Swan"
+        ]
+    },
+    "What is the name of this mall?": {
+        "image": "https://travel.usnews.com/dims4/USNEWS/95a396c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FCourtesy_of_Ala_Moana_Center.jpg",
+        "answers": [
+            "Ala Moana Center",
+            "Pearlridge Center",
+            "Kahala Mall",
+            "Windward Mall",
+            "Royal Hawaiian Center"
+        ]
+    }
 }
