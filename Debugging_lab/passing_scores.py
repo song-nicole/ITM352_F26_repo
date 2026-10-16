@@ -5,12 +5,18 @@ This program is supposed to:
   3. Report how many students passed and their average.
 Run it and look carefully at the output. Is everything correct?   """
 
+#Breakpoint is set on the left side of each line number stops the program at that line so you can inspect the values of variables.
+    #Red dot on line 17 is a breakpoint
+#Down arrow by the vs code run button and click "Python Debugger: Debug Python File" to run the program in debug mode. The program will stop at each breakpoint and you can inspect the values of variables.
+
 def remove_failing(scores):
     # Remove all scores below 60 and return the passing scores.
+    scores_to_return = scores.copy()  # Create a copy of the original list to avoid modifying it while iterating
     for score in scores:
+        print(f"Score: {score}, Scores: {scores}")
         if score < 60:
-            scores.remove(score)
-    return scores
+            scores_to_return.remove(score)
+    return scores_to_return
 
 def average(numbers):
     return sum(numbers) / len(numbers)
