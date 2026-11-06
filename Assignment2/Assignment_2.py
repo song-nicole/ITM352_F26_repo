@@ -1,5 +1,5 @@
 #Name: Nicole Song
-#Date: November 5, 2026
+#Date: November 6, 2026
 
 #Assignment: Build an interactive dashboard
 #Individual requirement 1: Ask user if they want the results exported to an excel file and what to name the excel file
@@ -15,7 +15,7 @@ import time
 #Temporary fix
 ssl._create_default_https_context = ssl._create_unverified_context
 
-
+#Function to load the CSV file
 def load_csv(filepath):
     print(f"Loading CSV file from: {filepath}")
     start_time = time.time()
@@ -32,13 +32,10 @@ def load_csv(filepath):
         print("Error reading the CSV file:", e)
         return None
 
-
+#Function to determine how many initial rows to display
 def display_initial_rows(data):
-    """Prompt for and display the requested number of initial DataFrame rows."""
     while True:
-        num_rows = input(
-            "\n \nHow many initial rows would you like to see? Please enter a whole number or 'all' for all rows."
-        ).strip().lower()
+        num_rows = input("\nHow many initial rows would you like to see? Please enter a whole number or 'all' for all rows.").strip().lower()
 
         if num_rows == 'all':
             num_rows = len(data)
@@ -61,11 +58,16 @@ def display_initial_rows(data):
         print(data.head(num_rows))
         return
 
+menu_options = (
+    ("Show the first n rows of sales data", display_initial_rows),
+    ("Show the number of employees by region", show_employees_by_region),
+    ("Create a custom pivot table", generate_custom_pivot_table),
+    ("Exit the program", exit_program),
+)
+
 #Main loop
 def main():
-    csv_file = (
-        "https://drive.google.com/uc?id=1ujY0WCcePdotG2xdbLyeECFW9lCJ4t-K"
-    )
+    csv_file = ("https://drive.google.com/uc?id=1ujY0WCcePdotG2xdbLyeECFW9lCJ4t-K")
     sales_data = load_csv(csv_file)
 
     if sales_data is None:
@@ -74,6 +76,10 @@ def main():
     while True:
         display_initial_rows(sales_data)
 
-
 if __name__ == "__main__":
     main()
+
+#Function to exit the program
+def exit_program(data):
+    print("Exiting the program.")
+    raise SystemExit
