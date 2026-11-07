@@ -22,12 +22,12 @@ def load_csv(filepath):
     try:
         df = pd.read_csv(filepath,engine='pyarrow',on_bad_lines='skip')
         end_time = time.time()
-        load_time = end_time - start_time
+        load_time = end_time - start_time #To log the time it took for the file to load
         print(f"\nCSV file loaded successfully in {load_time:.2f} seconds.")
-        print(f"Number of rows: {len(df)}")
+        print(f"Number of rows in the CSV file: {len(df)}")
         return df
     except Exception as e:
-        print("Error reading the CSV file:", e)
+        print("\nError reading the CSV file:", e)
         return None
 
 #Function to determine how many initial rows to display
@@ -42,7 +42,7 @@ def display_data(data):
         if num_rows == 'all':
             num_rows = len(data)
             return
-        if num_rows == '':
+        if num_rows == '' or num_rows == "0":
             return
 
         try:
@@ -64,7 +64,8 @@ def display_data(data):
 
 #Function to exit the program
 def exit_program(data):
-    print("Exiting the program...")
+    print("\nExiting the program...")
+    print("You have successfully exited the program.\n")
     raise SystemExit
 
 menu_options = (
@@ -84,7 +85,7 @@ menu_options = (
 def display_menu():
     while True:
         print("\nSales Data Menu")
-        for option_number, option in enumerate(menu_options, start=1): #DON'T use this code.
+        for option_number, option in enumerate(menu_options, start=1): #Number the menu options
             print(f"{option_number}. {option[0]}")
 
         selection = input("Select an option: ").strip()
@@ -97,10 +98,7 @@ def display_menu():
         if 1 <= selection <= len(menu_options):
             return selection
 
-        print(
-            f"\nInvalid selection. Please enter a number from 1 to "
-            f"{len(menu_options)}."
-        )
+        print(f"\nInvalid selection. Please enter a number from 1 to {len(menu_options)}.")
 
 #Main loop
 def main():
