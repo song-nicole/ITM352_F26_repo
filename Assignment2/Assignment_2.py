@@ -70,16 +70,48 @@ def display_data(data):
 #Function to calculate total sales by region and order type
 def total_by_region_and_type(data):
     print("\n\nTotal sales by region and order type:\n")
-    total_sales = data.groupby(['sales_region', 'order_type'])['sales'].sum()
-    print(total_sales)
+    pivot_table = pd.pivot_table(data, index='sales_region', columns='order_type', values='sales', aggfunc='sum')
+    print(pivot_table)
     return
 
 #Menu option 3
 #Function to calculate average sales by region with average sales by state and order type
 def average_sales_region_state_type(data):
     print("\n\nAverage sales by region with average sales by state and order type:\n")
-    average_sales = data.groupby(['sales_region', 'customer_state', 'order_type'])['sales'].mean()
-    print(average_sales)
+    pivot_table = pd.pivot_table(data, index='sales_region', columns=['customer_state', 'order_type'], values='sales', aggfunc='mean')
+    print(pivot_table)
+    return
+
+#Menu option 4
+#Function to calculate sales by customer type and order type by state
+def sales_by_customer_and_type(data):
+    print("\n\nSales by customer type and order type by state:\n")
+    pivot_table = pd.pivot_table(data, index=['customer_state', 'customer_type', 'order_type'], values='sales', aggfunc='sum')
+    print(pivot_table)
+    return
+
+#Menu option 5
+#Function to calculate total sales quantity and price by region and product
+def total_sales_by_region_and_product(data):
+    print("\n\nTotal sales quantity and price by region and product:\n")
+    pivot_table = pd.pivot_table(data, index=['sales_region', 'produce_name'], values=['quantity', 'unit_price'], aggfunc='sum')
+    print(pivot_table)
+    return
+
+#Menu option 6
+#Function to calculate total sales quantity and price by customer type
+def total_sales_by_customer_type(data):
+    print("\n\nTotal sales quantity and price by customer type:\n")
+    pivot_table = pd.pivot_table(data, index=['order_type', 'customer_type'], values=['quantity', 'unit_price'], aggfunc='sum')
+    print(pivot_table)
+    return
+
+#Menu option 7
+#Function to calculate max and min sales price of sales by category
+def max_min_sales_by_category(data):
+    print("\n\nMaximum and minimum sales price of sales by category:\n")
+    pivot_table = pd.pivot_table(data, index='product_category', values='unit_price', aggfunc=['max', 'min'])
+    print(pivot_table)
     return
 
 #Menu option 10
@@ -93,11 +125,11 @@ menu_options = (
     ("Show the first n rows of sales data", display_data),
     ("Total sales by region and order type", total_by_region_and_type),
     ("Average sales by region with average sales by state and order type", average_sales_region_state_type),
-    #("Sales by customer type and order type by state.", sales_by_customer_and_type),
-    #("Total sales quantity and price by region and product", total_sales_by_region_and_product),
-    #("Total sales quantity and price by customer type", total_sales_by_customer_type),
-    #("Max and min sales price of sales by category", max_min_sales_by_category),
-    #("Show the number of employees by region", show_employees_by_region),
+    ("Sales by customer type and order type by state.", sales_by_customer_and_type),
+    ("Total sales quantity and price by region and product", total_sales_by_region_and_product),
+    ("Total sales quantity and price by customer type", total_sales_by_customer_type),
+    ("Maximum and minimum sales price of sales by category", max_min_sales_by_category),
+    #("Show the number of employees by region", employees_by_region),
     #("Create a custom pivot table", custom_pivot_table),
     ("Exit the program", exit_program),
 )
