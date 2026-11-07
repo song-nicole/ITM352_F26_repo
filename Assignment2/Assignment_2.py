@@ -23,13 +23,17 @@ def load_csv(filepath):
         df = pd.read_csv(filepath,engine='pyarrow',on_bad_lines='skip')
         end_time = time.time()
         load_time = end_time - start_time #To log the time it took for the file to load
+        df['sales'] = df['quantity'] * df['unit_price'] #Created a sales column for total sales
         print(f"\nCSV file loaded successfully in {load_time:.2f} seconds.")
         print(f"Number of rows in the CSV file: {len(df)}")
+        print(f"The columns in the CSV file include information on: {df.columns.tolist()}")
+        print("\nWarning: Some lines of data may have been skipped due to bad data and some analytics may not work.")
         return df
     except Exception as e:
         print("\nError reading the CSV file:", e)
         return None
 
+#Menu option 1
 #Function to determine how many initial rows to display
 def display_data(data):
     while True:
@@ -62,6 +66,23 @@ def display_data(data):
         print(data.head(num_rows))
         return
 
+#Menu option 2
+#Function to calculate total sales by region and order type
+def total_by_region_and_type(data):
+    print("\n\nTotal sales by region and order type:\n")
+    total_sales = data.groupby(['sales_region', 'order_type'])['sales'].sum()
+    print(total_sales)
+    return
+
+#Menu option 3
+#Function to calculate average sales by region with average sales by state and order type
+def average_sales_region_state_type(data):
+    print("\n\nAverage sales by region with average sales by state and order type:\n")
+    average_sales = data.groupby(['sales_region', 'customer_state', 'order_type'])['sales'].mean()
+    print(average_sales)
+    return
+
+#Menu option 10
 #Function to exit the program
 def exit_program(data):
     print("\nExiting the program...")
@@ -70,8 +91,8 @@ def exit_program(data):
 
 menu_options = (
     ("Show the first n rows of sales data", display_data),
-    #("Total sales by region and order type", total_by_region_and_type),
-    #("Average sales by region with average sales by state and sale type", average_sales_region_state_type),
+    ("Total sales by region and order type", total_by_region_and_type),
+    ("Average sales by region with average sales by state and order type", average_sales_region_state_type),
     #("Sales by customer type and order type by state.", sales_by_customer_and_type),
     #("Total sales quantity and price by region and product", total_sales_by_region_and_product),
     #("Total sales quantity and price by customer type", total_sales_by_customer_type),
