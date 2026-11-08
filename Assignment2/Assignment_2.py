@@ -80,6 +80,7 @@ def total_by_region_and_type(data):
     print("\n\nTotal sales by region and order type:\n")
     pivot_table = pd.pivot_table(data, index='sales_region', columns='order_type', values='sales', aggfunc='sum', fill_value=0)
     print(pivot_table)
+    export_to_excel(pivot_table)
     return
 
 #Menu option 3
@@ -88,6 +89,7 @@ def average_sales_region_state_type(data):
     print("\n\nAverage sales by region with average sales by state and order type:\n")
     pivot_table = pd.pivot_table(data, index='sales_region', columns=['customer_state', 'order_type'], values='sales', aggfunc='mean', fill_value=0)
     print(pivot_table)
+    export_to_excel(pivot_table)
     return
 
 #Menu option 4
@@ -96,6 +98,7 @@ def sales_by_customer_and_type(data):
     print("\n\nSales by customer type and order type by state:\n")
     pivot_table = pd.pivot_table(data, index=['customer_state', 'customer_type', 'order_type'], values='sales', aggfunc='sum', fill_value=0)
     print(pivot_table)
+    export_to_excel(pivot_table)
     return
 
 #Menu option 5
@@ -104,6 +107,7 @@ def total_sales_by_region_and_product(data):
     print("\n\nTotal sales quantity and price by region and product:\n")
     pivot_table = pd.pivot_table(data, index=['sales_region', 'produce_name'], values=['quantity', 'unit_price'], aggfunc='sum', fill_value=0)
     print(pivot_table)
+    export_to_excel(pivot_table)
     return
 
 #Menu option 6
@@ -112,6 +116,7 @@ def total_sales_by_customer_type(data):
     print("\n\nTotal sales quantity and price by customer type:\n")
     pivot_table = pd.pivot_table(data, index=['order_type', 'customer_type'], values=['quantity', 'unit_price'], aggfunc='sum', fill_value=0)
     print(pivot_table)
+    export_to_excel(pivot_table)
     return
 
 #Menu option 7
@@ -120,6 +125,7 @@ def max_min_sales_by_category(data):
     print("\n\nMaximum and minimum sales price of sales by category:\n")
     pivot_table = pd.pivot_table(data, index='product_category', values='unit_price', aggfunc=['max', 'min'], fill_value=0)
     print(pivot_table)
+    export_to_excel(pivot_table)
     return
 
 #Menu option 8
@@ -128,6 +134,7 @@ def employees_by_region(data):
     print("\n\nNumber of unique employees by region:\n")
     pivot_table = pd.pivot_table(data, index='sales_region', values='employee_id', aggfunc='count', fill_value=0)
     print(pivot_table)
+    export_to_excel(pivot_table)
     return
 
 #Menu option 9
@@ -192,6 +199,7 @@ def custom_pivot_table(data):
     
     print("\nYour Custom Pivot Table:\n")
     print(pivot_table)
+    export_to_excel(pivot_table)
 
 #Menu option 10
 #Function to exit the program
@@ -199,6 +207,32 @@ def exit_program(data):
     print("\nExiting the program...")
     print("You have successfully exited the program.\n")
     raise SystemExit
+
+#Individual requirement 1 - export to excel
+#*Requires the installation of the openpyxl package
+def export_to_excel(data):
+    export = input("\nWould you like to export this data to Excel? (y/n): ").strip().lower()
+    if export == "n":
+        return
+    elif export == "y":
+        file_name = input("\nWhat would you like to name the Excel file? \nFile name: ").strip()
+        if not file_name:
+            print("\nFile name is required.")
+            return
+        if not file_name.endswith(".xlsx"):
+            file_name += ".xlsx"
+        try:
+            data.to_excel(file_name)
+            print(f"\nData successfully exported to {file_name}.")
+        except Exception as e:
+            print(f"\nError exporting data to Excel: {e}")
+    else:
+        print("\nInvalid input. Please enter 'y' or 'n'.")
+        export_to_excel(data)
+
+#Individual requirement 2 - track and store previous analytics
+#def past_analytics(data):
+
 
 menu_options = (
     ("Show the first n rows of sales data", display_data),
@@ -210,6 +244,7 @@ menu_options = (
     ("Maximum and minimum sales price of sales by category", max_min_sales_by_category),
     ("Show the number of employees by region", employees_by_region),
     ("Create a custom pivot table", custom_pivot_table),
+    #("View past analytics", past_analytics)
     ("Exit the program", exit_program),
 )
 
