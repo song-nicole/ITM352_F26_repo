@@ -1,0 +1,405 @@
+Loading CSV file from: https://drive.google.com/uc?id=1ujY0WCcePdotG2xdbLyeECFW9lCJ4t-K
+Please wait...
+
+CSV file loaded successfully in 2.08 seconds.
+Number of rows in the CSV file: 5130
+The columns in the CSV file include information on: ['order_number', 'employee_id', 'employee_name', 'job_title', 'sales_region', 'order_date', 'order_type', 'customer_type', 'customer_name', 'customer_state', 'product_category', 'product_number', 'produce_name', 'quantity', 'unit_price', 'sales']
+
+*** Some lines of data may have been skipped due to bad data and some analytics may not work.
+*** Some of the data may be wrapped to fit the screen.
+
+
+Sales Data Summary:
+
+Total orders               5130.00
+Number of employees          44.00
+Sales regions                 9.00
+Unique customers           2417.00
+Product categories            3.00
+Unique states                49.00
+Total sales amount      1708701.80
+Total quantities sold     16523.00
+dtype: float64
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option:    9
+
+
+Select rows: 
+1. order_number
+2. employee_id
+3. employee_name
+4. job_title
+5. sales_region
+6. order_date
+7. order_type
+8. customer_type
+9. customer_name
+10. customer_state
+11. product_category
+12. product_number
+13. produce_name
+14. quantity
+15. unit_price
+16. sales
+Enter the number(s) of your choice(s), separated by commas:     7,   8, 11
+
+Select columns (press Enter to skip): 
+1. order_number
+2. employee_id
+3. employee_name
+4. job_title
+5. sales_region
+6. order_date
+7. customer_name
+8. customer_state
+9. product_number
+10. produce_name
+11. quantity
+12. unit_price
+13. sales
+Enter the number(s) of your choice(s), separated by commas:   5   
+
+
+Select values: 
+1. order_number
+2. employee_id
+3. quantity
+4. unit_price
+5. sales
+Enter the number(s) of your choice(s), separated by commas: 3
+
+
+Select an aggregation function: 
+1. sum
+2. mean
+3. count
+Enter the number(s) of your choice(s), separated by commas:    1
+
+Your Custom Pivot Table:
+
+                                              quantity                 \
+sales_region                              Central East N Central East   
+order_type customer_type product_category                               
+Retail     Business      Bath products           21.00           9.00   
+                         Gift Basket              6.00           3.00   
+                         Olive Oil               30.00          32.00   
+           Individual    Bath products          406.00         562.00   
+                         Gift Basket            227.00         296.00   
+                         Olive Oil              785.00         903.00   
+Wholesale  Business      Bath products          116.00         150.00   
+                         Gift Basket             34.00          63.00   
+                         Olive Oil              682.00         713.00   
+
+                                                                              \
+sales_region                              N Central West Northeast Northwest   
+order_type customer_type product_category                                      
+Retail     Business      Bath products              1.00     10.00      4.00   
+                         Gift Basket                 NaN     12.00      8.00   
+                         Olive Oil                  3.00      4.00     18.00   
+           Individual    Bath products             51.00    368.00    162.00   
+                         Gift Basket               26.00    230.00     72.00   
+                         Olive Oil                 77.00    639.00    244.00   
+Wholesale  Business      Bath products             11.00     45.00     41.00   
+                         Gift Basket                 NaN     12.00     31.00   
+                         Olive Oil                  7.00    616.00    168.00   
+
+                                                                         \
+sales_region                              S Central East S Central West   
+order_type customer_type product_category                                 
+Retail     Business      Bath products             20.00          10.00   
+                         Gift Basket               10.00           2.00   
+                         Olive Oil                 45.00          30.00   
+           Individual    Bath products            596.00         180.00   
+                         Gift Basket              343.00         119.00   
+                         Olive Oil                976.00         360.00   
+Wholesale  Business      Bath products            101.00          33.00   
+                         Gift Basket               92.00          12.00   
+                         Olive Oil                924.00         233.00   
+
+                                                               
+sales_region                              Southeast Southwest  
+order_type customer_type product_category                      
+Retail     Business      Bath products        12.00     26.00  
+                         Gift Basket          18.00      2.00  
+                         Olive Oil            20.00     19.00  
+           Individual    Bath products       416.00    456.00  
+                         Gift Basket         234.00    282.00  
+                         Olive Oil           810.00    821.00  
+Wholesale  Business      Bath products        64.00    105.00  
+                         Gift Basket          50.00     41.00  
+                         Olive Oil           620.00    543.00  
+
+Would you like to export this data to Excel? (y/n):    n
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option:    22
+
+Invalid selection. Please enter a number from 1 to 11.
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option:     aa
+
+Invalid selection. Please enter a menu number.
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option: 9
+
+
+Select rows: 
+1. order_number
+2. employee_id
+3. employee_name
+4. job_title
+5. sales_region
+6. order_date
+7. order_type
+8. customer_type
+9. customer_name
+10. customer_state
+11. product_category
+12. product_number
+13. produce_name
+14. quantity
+15. unit_price
+16. sales
+Enter the number(s) of your choice(s), separated by commas: 112342
+
+Invalid selection. Please enter valid option number(s).
+
+
+Select rows: 
+1. order_number
+2. employee_id
+3. employee_name
+4. job_title
+5. sales_region
+6. order_date
+7. order_type
+8. customer_type
+9. customer_name
+10. customer_state
+11. product_category
+12. product_number
+13. produce_name
+14. quantity
+15. unit_price
+16. sales
+Enter the number(s) of your choice(s), separated by commas: 
+
+At least one row selection is required.
+
+
+Select rows: 
+1. order_number
+2. employee_id
+3. employee_name
+4. job_title
+5. sales_region
+6. order_date
+7. order_type
+8. customer_type
+9. customer_name
+10. customer_state
+11. product_category
+12. product_number
+13. produce_name
+14. quantity
+15. unit_price
+16. sales
+Enter the number(s) of your choice(s), separated by commas:      11
+
+Select columns (press Enter to skip): 
+1. order_number
+2. employee_id
+3. employee_name
+4. job_title
+5. sales_region
+6. order_date
+7. order_type
+8. customer_type
+9. customer_name
+10. customer_state
+11. product_number
+12. produce_name
+13. quantity
+14. unit_price
+15. sales
+Enter the number(s) of your choice(s), separated by commas:      7,  8
+
+
+Select values: 
+1. order_number
+2. employee_id
+3. quantity
+4. unit_price
+5. sales
+Enter the number(s) of your choice(s), separated by commas:    3, 4
+
+
+Select an aggregation function: 
+1. sum
+2. mean
+3. count
+Enter the number(s) of your choice(s), separated by commas: 1
+
+Your Custom Pivot Table:
+
+                 quantity                      unit_price                     
+order_type         Retail            Wholesale     Retail            Wholesale
+customer_type    Business Individual  Business   Business Individual  Business
+product_category                                                              
+Bath products         113       3197       666     454.35   12949.58    788.79
+Gift Basket            61       1829       335    1632.50   45143.50   2542.00
+Olive Oil             201       5615      4506    8206.50  225138.00 133137.00
+
+Would you like to export this data to Excel? (y/n):     no.
+
+Invalid input. Please enter 'y' or 'n'.
+
+Would you like to export this data to Excel? (y/n): n
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option: 9
+
+
+Select rows: 
+1. order_number
+2. employee_id
+3. employee_name
+4. job_title
+5. sales_region
+6. order_date
+7. order_type
+8. customer_type
+9. customer_name
+10. customer_state
+11. product_category
+12. product_number
+13. produce_name
+14. quantity
+15. unit_price
+16. sales
+Enter the number(s) of your choice(s), separated by commas: 8    
+
+Select columns (press Enter to skip): 
+1. order_number
+2. employee_id
+3. employee_name
+4. job_title
+5. sales_region
+6. order_date
+7. order_type
+8. customer_name
+9. customer_state
+10. product_category
+11. product_number
+12. produce_name
+13. quantity
+14. unit_price
+15. sales
+Enter the number(s) of your choice(s), separated by commas: 10
+
+
+Select values: 
+1. order_number
+2. employee_id
+3. quantity
+4. unit_price
+5. sales
+Enter the number(s) of your choice(s), separated by commas: 3,4,5
+
+
+Select an aggregation function: 
+1. sum
+2. mean
+3. count
+Enter the number(s) of your choice(s), separated by commas: 1
+
+Your Custom Pivot Table:
+
+                      quantity                               sales  \
+product_category Bath products Gift Basket Olive Oil Bath products   
+customer_type                                                        
+Business                   779         396      4707       7085.47   
+Individual                3197        1829      5615      32711.58   
+
+                                          unit_price                        
+product_category Gift Basket Olive Oil Bath products Gift Basket Olive Oil  
+customer_type                                                               
+Business            22466.00 972530.75       1243.14     4174.50 141343.50  
+Individual         113275.00 560633.00      12949.58    45143.50 225138.00  
+
+Would you like to export this data to Excel? (y/n):  n
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option: 11
+
+Exiting the program...
+You have successfully exited the program.
