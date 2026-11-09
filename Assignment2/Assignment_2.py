@@ -1,9 +1,10 @@
 #Name: Nicole Song
-#Date: November 7, 2026
+#Date: November 8, 2026
 
 #Assignment: Build an interactive dashboard
-#Individual requirement 1: Ask user if they want the results exported to an excel file and what to name the excel file
-#Individual requirement 2: Keep track of which analytics have been done, store the results, and add it as a menu item
+#Individual requirement 1 (#1): Ask user if they want the results exported to an excel file and what to name the excel file
+#Individual requirement 2 (#5): Implement a new non-trivial sales analytic
+#Extra credit (#2): Display a summary of the sales data
 
 #Started with Assignment 2 Workshop Ex3 as a base and worked from there
 #Incorporated parts of Assignment 2 Workshop Ex4
@@ -20,6 +21,27 @@ ssl._create_default_https_context = ssl._create_unverified_context
 pd.set_option("display.max_columns", None)
 pd.set_option("display.max_rows", None)
 
+#To round everything to 2 decimal places
+pd.set_option("display.float_format", "{:.2f}".format)
+
+#Extra credit
+#Function to display an overall sales data summary
+def sales_data_summary(data):
+    summary = pd.Series({
+        "Total orders": data["order_number"].nunique(),
+        "Number of employees": data["employee_id"].nunique(),
+        "Sales regions": data["sales_region"].nunique(),
+        "Unique customers": data["customer_name"].nunique(),
+        "Product categories": data["product_category"].nunique(),
+        "Unique states": data["customer_state"].nunique(),
+        "Total sales amount": data["sales"].sum(),
+        "Total quantities sold": data["quantity"].sum()
+    })
+
+    print("\n\nSales Data Summary:\n")
+    print(summary)
+    return
+
 #Function to load the CSV file
 def load_csv(filepath):
     start_time = time.time()
@@ -35,6 +57,7 @@ def load_csv(filepath):
         print(f"The columns in the CSV file include information on: {df.columns.tolist()}")
         print("\n*** Some lines of data may have been skipped due to bad data and some analytics may not work.")
         print("*** Some of the data may be wrapped to fit the screen.")
+        sales_data_summary(df)
         return df
     
     except Exception as e:
@@ -201,7 +224,7 @@ def custom_pivot_table(data):
     print(pivot_table)
     export_to_excel(pivot_table)
 
-#Menu option 10
+#Last menu option
 #Function to exit the program
 def exit_program(data):
     print("\nExiting the program...")
@@ -209,6 +232,7 @@ def exit_program(data):
     raise SystemExit
 
 #Individual requirement 1 - export to excel
+#Function that asks the user if they would like to export the data to Excel and what to name the file
 #*Requires the installation of the openpyxl package
 def export_to_excel(data):
     export = input("\nWould you like to export this data to Excel? (y/n): ").strip().lower()
@@ -218,7 +242,7 @@ def export_to_excel(data):
         file_name = input("\nWhat would you like to name the Excel file? \nFile name: ").strip()
         if not file_name:
             print("\nFile name is required.")
-            return
+            export_to_excel(data)
         if not file_name.endswith(".xlsx"):
             file_name += ".xlsx"
         try:
@@ -230,9 +254,16 @@ def export_to_excel(data):
         print("\nInvalid input. Please enter 'y' or 'n'.")
         export_to_excel(data)
 
-#Individual requirement 2 - track and store previous analytics
-#def past_analytics(data):
-
+#Individual requirement 2 - implement a new non-trivial sales analytic
+#Menu option 10
+#Function that compares each product category's popularity and profitability
+def category_popularity_vs_profitability(data):
+    print("\n\nProduct category popularity vs profitability:\n")
+    pivot_table = pd.pivot_table(data, index='product_category', values=['quantity', 'unit_price', 'sales'],
+    aggfunc={'quantity': 'sum', 'unit_price': 'mean', 'sales': 'sum'}, fill_value=0,)
+    print(pivot_table)
+    export_to_excel(pivot_table)
+    return
 
 menu_options = (
     ("Show the first n rows of sales data", display_data),
@@ -244,7 +275,7 @@ menu_options = (
     ("Maximum and minimum sales price of sales by category", max_min_sales_by_category),
     ("Show the number of employees by region", employees_by_region),
     ("Create a custom pivot table", custom_pivot_table),
-    #("View past analytics", past_analytics)
+    ("Product category popularity vs profitability", category_popularity_vs_profitability),
     ("Exit the program", exit_program),
 )
 
