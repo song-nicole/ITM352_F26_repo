@@ -1,0 +1,502 @@
+Loading CSV file from: https://drive.google.com/uc?id=1ujY0WCcePdotG2xdbLyeECFW9lCJ4t-K
+Please wait...
+
+CSV file loaded successfully in 2.04 seconds.
+Number of rows in the CSV file: 5130
+The columns in the CSV file include information on: ['order_number', 'employee_id', 'employee_name', 'job_title', 'sales_region', 'order_date', 'order_type', 'customer_type', 'customer_name', 'customer_state', 'product_category', 'product_number', 'produce_name', 'quantity', 'unit_price', 'sales']
+
+*** Some lines of data may have been skipped due to bad data and some analytics may not work.
+*** Some of the data may be wrapped to fit the screen.
+
+
+Sales Data Summary:
+
+Total orders               5130.00
+Number of employees          44.00
+Sales regions                 9.00
+Unique customers           2417.00
+Product categories            3.00
+Unique states                49.00
+Total sales amount      1708701.80
+Total quantities sold     16523.00
+dtype: float64
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option: 4
+
+
+Sales by customer type and order type by state:
+
+                                                  sales
+customer_state       customer_type order_type          
+Alabama              Business      Retail       1088.00
+                                   Wholesale    8389.99
+                     Individual    Retail      14434.00
+Alaska               Business      Retail        886.00
+                                   Wholesale    2399.50
+                     Individual    Retail       3703.90
+Arizona              Business      Retail       1630.00
+                                   Wholesale   20884.80
+                     Individual    Retail      22556.84
+Arkansas             Business      Wholesale    7507.50
+                     Individual    Retail       5631.18
+California           Business      Retail       1657.91
+                                   Wholesale   99507.70
+                     Individual    Retail      93676.17
+Colorado             Business      Retail       2669.87
+                                   Wholesale   21886.83
+                     Individual    Retail      21135.93
+Connecticut          Business      Wholesale   20042.95
+                     Individual    Retail       8017.66
+Delaware             Business      Retail        141.50
+                                   Wholesale    3276.00
+                     Individual    Retail       4536.00
+District of Columbia Business      Retail         41.32
+                                   Wholesale    8916.61
+                     Individual    Retail      18454.50
+Florida              Business      Retail       2194.48
+                                   Wholesale   89952.73
+                     Individual    Retail      48672.34
+Georgia              Business      Wholesale   29211.88
+                     Individual    Retail      20794.11
+Hawaii               Individual    Retail       1603.17
+Idaho                Individual    Retail       5307.71
+Illinois             Business      Retail        824.00
+                                   Wholesale   27651.81
+                     Individual    Retail      18767.09
+Indiana              Business      Retail        759.00
+                                   Wholesale   10406.50
+                     Individual    Retail      17051.02
+Iowa                 Business      Retail       1192.88
+                                   Wholesale   12492.00
+                     Individual    Retail      10801.62
+Kansas               Business      Wholesale   15185.72
+                     Individual    Retail       7379.41
+Kentucky             Business      Retail        338.96
+                                   Wholesale   21980.97
+                     Individual    Retail      12109.88
+Louisiana            Business      Retail       1319.78
+                                   Wholesale    4212.00
+                     Individual    Retail      14682.76
+Maryland             Business      Wholesale   14952.45
+                     Individual    Retail       8002.31
+Massachusetts        Business      Wholesale   11781.00
+                     Individual    Retail      10044.73
+Michigan             Business      Retail       1043.00
+                                   Wholesale   12135.00
+                     Individual    Retail      14760.71
+Minnesota            Business      Wholesale   27127.22
+                     Individual    Retail      14681.56
+Mississippi          Individual    Retail       2833.45
+Missouri             Business      Retail        535.00
+                                   Wholesale   21509.45
+                     Individual    Retail      12916.71
+Montana              Business      Retail        143.50
+                     Individual    Retail       1097.45
+Nebraska             Business      Wholesale    1731.50
+                     Individual    Retail       5290.88
+Nevada               Business      Retail         69.91
+                                   Wholesale   22469.50
+                     Individual    Retail       7736.36
+New Hampshire        Individual    Retail       1436.97
+New Jersey           Business      Retail        575.00
+                                   Wholesale    7236.00
+                     Individual    Retail      10155.04
+New Mexico           Business      Wholesale    3135.00
+                     Individual    Retail       4147.76
+New York             Business      Retail       1129.94
+                                   Wholesale   55183.41
+                     Individual    Retail      34295.98
+North Carolina       Business      Wholesale    9282.60
+                     Individual    Retail      14357.41
+North Dakota         Individual    Retail       1369.79
+Ohio                 Business      Retail        959.97
+                                   Wholesale   24852.74
+                     Individual    Retail      21875.12
+Oklahoma             Business      Retail         81.97
+                                   Wholesale   15914.78
+                     Individual    Retail      10571.52
+Oregon               Business      Wholesale    4691.00
+                     Individual    Retail       7072.11
+Pennsylvania         Business      Wholesale   28370.00
+                     Individual    Retail      18552.59
+South Carolina       Business      Retail        238.97
+                     Individual    Retail       8888.22
+South Dakota         Individual    Retail       2031.33
+Tennessee            Business      Wholesale   17174.76
+                     Individual    Retail      12770.61
+Texas                Business      Retail       5236.62
+                                   Wholesale  156667.00
+                     Individual    Retail      72785.57
+Utah                 Business      Wholesale    8279.40
+                     Individual    Retail       6689.16
+Vermont              Business      Wholesale    4810.00
+Virginia             Business      Retail       2037.86
+                                   Wholesale   61152.50
+                     Individual    Retail      23824.72
+Washington           Business      Retail       1190.96
+                                   Wholesale   26149.62
+                     Individual    Retail      16275.98
+West Virginia        Business      Retail        587.97
+                                   Wholesale   12402.00
+                     Individual    Retail       5410.47
+Wisconsin            Business      Wholesale   22595.43
+                     Individual    Retail       7356.31
+Wyoming              Individual    Retail         73.47
+
+Would you like to export this data to Excel? (y/n):   n
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option: 1
+
+How many rows of data would you like to see?
+   Please enter a whole number from 1 to 5130.
+   For all rows, enter 'all'.
+   To display no rows, press Enter.
+
+Number of rows: 23.34
+
+Invalid input. Please enter a whole number or 'all'.
+
+How many rows of data would you like to see?
+   Please enter a whole number from 1 to 5130.
+   For all rows, enter 'all'.
+   To display no rows, press Enter.
+
+Number of rows: aaa
+
+Invalid input. Please enter a whole number or 'all'.
+
+How many rows of data would you like to see?
+   Please enter a whole number from 1 to 5130.
+   For all rows, enter 'all'.
+   To display no rows, press Enter.
+
+Number of rows: 8
+   order_number  employee_id    employee_name               job_title  \
+0       1102935    900019019  Alexandra Kundt  Senior Sales Associate   
+1       1102976    900019019  Alexandra Kundt  Senior Sales Associate   
+2       1102988    900019019  Alexandra Kundt  Senior Sales Associate   
+3       1103012    900019019  Alexandra Kundt  Senior Sales Associate   
+4       1103031    900019019  Alexandra Kundt  Senior Sales Associate   
+5       1103106    900019019  Alexandra Kundt  Senior Sales Associate   
+6       1103113    900019019  Alexandra Kundt  Senior Sales Associate   
+7       1103172    900019019  Alexandra Kundt  Senior Sales Associate   
+
+     sales_region  order_date order_type customer_type       customer_name  \
+0  S Central East      9/2/19     Retail    Individual      Skipton Fealty   
+1  S Central East  15/02/2019     Retail    Individual     Lanni D'Ambrogi   
+2  S Central East  16/02/2019     Retail    Individual             Far Pow   
+3  S Central East  19/02/2019  Wholesale      Business           Swift Inc   
+4  S Central East  22/02/2019     Retail    Individual  Carmine Priestnall   
+5  S Central East      9/3/19     Retail    Individual         Tann Angear   
+6  S Central East     11/3/19  Wholesale      Business         Hilll Group   
+7  S Central East  18/03/2019     Retail    Individual         Devlin Nock   
+
+  customer_state product_category product_number  \
+0       Arkansas        Olive Oil          OO206   
+1       Missouri      Gift Basket          GB301   
+2    Mississippi        Olive Oil          OO302   
+3          Texas        Olive Oil          OO125   
+4          Texas        Olive Oil          OO128   
+5       Oklahoma    Bath products          BP502   
+6          Texas        Olive Oil          OO206   
+7          Texas        Olive Oil          OO204   
+
+                           produce_name  quantity  unit_price  sales  
+0      Chili Extra Virgin Olive Oil 2pk         3       45.00 135.00  
+1  Scented Olive Oil Candle Gift Basket         1       19.50  19.50  
+2          Chili Extra Virgin Olive Oil         4       26.00 104.00  
+3    Garlic Extra Virgin Olive Oil 12pk         4      234.00 936.00  
+4     Chili Extra Virgin Olive Oil 12pk         3      234.00 702.00  
+5          Vanilla and Olive Oil Candle         2        6.99  13.98  
+6      Chili Extra Virgin Olive Oil 2pk         5       45.00 225.00  
+7      Lemon Extra Virgin Olive Oil 2pk         4       45.00 180.00  
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option:   2
+
+
+Total sales by region and order type:
+
+order_type        Retail  Wholesale
+sales_region                       
+Central East   102613.51  149137.89
+N Central East 117451.69  152446.42
+N Central West  10006.42    1731.50
+Northeast       84078.95  127423.36
+Northwest       34565.62   33240.12
+S Central East 130742.32  208945.73
+S Central West  54681.80   51051.03
+Southeast       96310.12  127554.60
+Southwest      104743.52  121977.20
+
+Would you like to export this data to Excel? (y/n):    y
+
+What would you like to name the Excel file? 
+File name: totalsalesbyregionandordertype
+
+Data successfully exported to totalsalesbyregionandordertype.xlsx.
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option: 7
+
+
+Maximum and minimum sales price of sales by category:
+
+                        max        min
+                 unit_price unit_price
+product_category                      
+Bath products         30.00       5.99
+Gift Basket          115.00      19.50
+Olive Oil            234.00      16.75
+
+Would you like to export this data to Excel? (y/n):    n
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option:         8
+
+
+Number of unique employees by region:
+
+                employee_id
+sales_region               
+Central East            697
+N Central East          832
+N Central West           70
+Northeast               604
+Northwest               230
+S Central East          941
+S Central West          331
+Southeast               694
+Southwest               731
+
+Would you like to export this data to Excel? (y/n):  no
+
+Invalid input. Please enter 'y' or 'n'.
+
+Would you like to export this data to Excel? (y/n):   
+
+Invalid input. Please enter 'y' or 'n'.
+
+Would you like to export this data to Excel? (y/n): n
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option:     6
+
+
+Total sales quantity and price by customer type:
+
+                          quantity  unit_price
+order_type customer_type                      
+Retail     Business            375    10293.35
+           Individual        10641   283231.08
+Wholesale  Business           5507   136467.79
+
+Would you like to export this data to Excel? (y/n):   y
+
+What would you like to name the Excel file? 
+File name: QuantityandPricebyCustomerType
+
+Data successfully exported to QuantityandPricebyCustomerType.xlsx.
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option: 1
+
+How many rows of data would you like to see?
+   Please enter a whole number from 1 to 5130.
+   For all rows, enter 'all'.
+   To display no rows, press Enter.
+
+Number of rows: 352454333333333
+
+Requested 352454333333333 rows, but only 5130 rows are available.
+
+How many rows of data would you like to see?
+   Please enter a whole number from 1 to 5130.
+   For all rows, enter 'all'.
+   To display no rows, press Enter.
+
+Number of rows:       55.75
+
+Invalid input. Please enter a whole number or 'all'.
+
+How many rows of data would you like to see?
+   Please enter a whole number from 1 to 5130.
+   For all rows, enter 'all'.
+   To display no rows, press Enter.
+
+Number of rows: 18
+    order_number  employee_id    employee_name               job_title  \
+0        1102935    900019019  Alexandra Kundt  Senior Sales Associate   
+1        1102976    900019019  Alexandra Kundt  Senior Sales Associate   
+2        1102988    900019019  Alexandra Kundt  Senior Sales Associate   
+3        1103012    900019019  Alexandra Kundt  Senior Sales Associate   
+4        1103031    900019019  Alexandra Kundt  Senior Sales Associate   
+5        1103106    900019019  Alexandra Kundt  Senior Sales Associate   
+6        1103113    900019019  Alexandra Kundt  Senior Sales Associate   
+7        1103172    900019019  Alexandra Kundt  Senior Sales Associate   
+8        1103175    900019019  Alexandra Kundt  Senior Sales Associate   
+9        1103240    900019019  Alexandra Kundt  Senior Sales Associate   
+10       1103282    900019019  Alexandra Kundt  Senior Sales Associate   
+11       1103312    900019019  Alexandra Kundt  Senior Sales Associate   
+12       1103348    900019019  Alexandra Kundt  Senior Sales Associate   
+13       1103367    900019019  Alexandra Kundt  Senior Sales Associate   
+14       1103462    900019019  Alexandra Kundt  Senior Sales Associate   
+15       1103461    900019019  Alexandra Kundt  Senior Sales Associate   
+16       1103475    900019019  Alexandra Kundt  Senior Sales Associate   
+17       1103537    900019019  Alexandra Kundt  Senior Sales Associate   
+
+      sales_region  order_date order_type customer_type       customer_name  \
+0   S Central East      9/2/19     Retail    Individual      Skipton Fealty   
+1   S Central East  15/02/2019     Retail    Individual     Lanni D'Ambrogi   
+2   S Central East  16/02/2019     Retail    Individual             Far Pow   
+3   S Central East  19/02/2019  Wholesale      Business           Swift Inc   
+4   S Central East  22/02/2019     Retail    Individual  Carmine Priestnall   
+5   S Central East      9/3/19     Retail    Individual         Tann Angear   
+6   S Central East     11/3/19  Wholesale      Business         Hilll Group   
+7   S Central East  18/03/2019     Retail    Individual         Devlin Nock   
+8   S Central East  19/03/2019     Retail    Individual   Jerrilyn Doubrava   
+9   S Central East  29/03/2019     Retail    Individual      Skipton Fealty   
+10  S Central East      3/4/19     Retail    Individual         Devlin Nock   
+11  S Central East      7/4/19     Retail    Individual   Granny Matevosian   
+12  S Central East     12/4/19     Retail    Individual         Dean Wharin   
+13  S Central East  14/04/2019     Retail    Individual       Zonnya Machon   
+14  S Central East  28/04/2019     Retail    Individual     Skippie Anthill   
+15  S Central East  28/04/2019     Retail    Individual      Gan Philipsson   
+16  S Central East  29/04/2019     Retail    Individual      Gabriel Polini   
+17  S Central East      6/5/19     Retail    Individual             Far Pow   
+
+   customer_state product_category product_number  \
+0        Arkansas        Olive Oil          OO206   
+1        Missouri      Gift Basket          GB301   
+2     Mississippi        Olive Oil          OO302   
+3           Texas        Olive Oil          OO125   
+4           Texas        Olive Oil          OO128   
+5        Oklahoma    Bath products          BP502   
+6           Texas        Olive Oil          OO206   
+7           Texas        Olive Oil          OO204   
+8        Missouri        Olive Oil          OO307   
+9        Arkansas        Olive Oil          OO207   
+10          Texas    Bath products          BP105   
+11       Missouri    Bath products          BP303   
+12       Oklahoma        Olive Oil          OO205   
+13       Arkansas    Bath products          BP503   
+14          Texas        Olive Oil          OO607   
+15       Oklahoma        Olive Oil          OO207   
+16          Texas    Bath products          BP402   
+17    Mississippi      Gift Basket          GB101   
+
+                            produce_name  quantity  unit_price  sales  
+0       Chili Extra Virgin Olive Oil 2pk         3       45.00 135.00  
+1   Scented Olive Oil Candle Gift Basket         1       19.50  19.50  
+2           Chili Extra Virgin Olive Oil         4       26.00 104.00  
+3     Garlic Extra Virgin Olive Oil 12pk         4      234.00 936.00  
+4      Chili Extra Virgin Olive Oil 12pk         3      234.00 702.00  
+5           Vanilla and Olive Oil Candle         2        6.99  13.98  
+6       Chili Extra Virgin Olive Oil 2pk         5       45.00 225.00  
+7       Lemon Extra Virgin Olive Oil 2pk         4       45.00 180.00  
+8        Rosemary Extra Virgin Olive Oil         3       26.00  78.00  
+9       Basil Extra Virgin Olive Oil 2pk         2       45.00  90.00  
+10         Lavender and Olive Oil Lotion         4        9.99  39.96  
+11       Mandarin and Olive Oil Bar Soap         1        5.99   5.99  
+12   Rosemary Extra Virgin Olive Oil 2pk         1       45.00  45.00  
+13        Vanilla and Olive Oil Bar Soap         3        5.99  17.97  
+14     Garlic Extra Virgin Olive Oil 6pk         2      123.00 246.00  
+15      Basil Extra Virgin Olive Oil 2pk         2       45.00  90.00  
+16        Assorted Olive Bar Soap - 6 pk         3       30.00  90.00  
+17              Infused EVOO Gift Basket         3       75.00 225.00  
+
+Sales Data Menu
+1. Show the first n rows of sales data
+2. Total sales by region and order type
+3. Average sales by region with average sales by state and order type
+4. Sales by customer type and order type by state.
+5. Total sales quantity and price by region and product
+6. Total sales quantity and price by customer type
+7. Maximum and minimum sales price of sales by category
+8. Show the number of employees by region
+9. Create a custom pivot table
+10. Product category popularity vs profitability
+11. Exit the program
+Select an option: 11
+
+Exiting the program...
+You have successfully exited the program.
