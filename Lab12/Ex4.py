@@ -48,17 +48,10 @@ HTML = """
 
             <button type="submit">Submit answer</button>
         </form>
-
-        {% if not eliminated %}
-            <form method="post" action="{{ url_for('eliminate') }}">
-                <button type="submit">Use 50/50</button>
-            </form>
-        {% endif %}
     {% endif %}
 </body>
 </html>
 """
-
 
 @app.route("/")
 def home():
@@ -93,9 +86,7 @@ def home():
         number=index + 1,
         total=len(session["questions"]),
         score=session["score"],
-        eliminated=session.get("eliminated", False),
     )
-
 
 @app.route("/start")
 def start():
@@ -107,10 +98,8 @@ def start():
     session["questions"] = questions
     session["index"] = 0
     session["score"] = 0
-    session["eliminated"] = False
 
     return redirect(url_for("home"))
-
 
 @app.post("/answer")
 def answer():
@@ -124,25 +113,6 @@ def answer():
 
     session["index"] += 1
     return redirect(url_for("home"))
-
-
-@app.post("/eliminate")
-def eliminate():
-    index = session["index"]
-    question, data = session["questions"][index]
-    options = data["answers"] if isinstance(data, dict) else data
-    correct_answer = options[0]
-
-    incorrect = [option for option in options if option != correct_answer]
-    removed = random.sample(incorrect, min(2, len(incorrect)))
-
-    session["questions"][index][1]["answers"] = [
-        option for option in options if option not in removed
-    ]
-
-    session["eliminated"] = True
-    return redirect(url_for("home"))
-
 
 if __name__ == "__main__":
     app.run(debug=True)
