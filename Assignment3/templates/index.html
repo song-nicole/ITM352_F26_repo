@@ -6,7 +6,32 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1>Welcome to the Hawaii Quiz</h1>
-    <a href="{{ url_for('quiz') }}">Start Quiz</a>
+    {% if name %}
+        <h1>Welcome, {{ name }}!</h1>
+
+        {% if score_history %}
+            <h2>Your score history</h2>
+            <ol>
+                {% for result in score_history %}
+                    <li>{{ result.score }} / {{ result.num_questions }}</li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <p>Welcome to the Hawaii Quiz!</p>
+        {% endif %}
+
+        <a href="{{ url_for('quiz') }}">Start Quiz</a>
+        <br>
+        <a href="{{ url_for('logout') }}">Sign Out</a>
+        
+    {% else %}
+        <h1>Welcome to the Hawaii Quiz</h1>
+        <p>What is your name?</p>
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Save Name</button>
+        </form>
+    {% endif %}
 </body>
 </html>

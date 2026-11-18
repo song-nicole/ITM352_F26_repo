@@ -6,10 +6,10 @@
     <title>Quiz</title>
 </head>
 <body>
-    <h1>Hawaii Quiz</h1>
+    <h1>{{ name }}'s Hawaii Quiz</h1>
     <form method="POST">
-        <h1>Question {{question_number+1}} out of {{num_questions}}: </h1>
-        <h1>{{question}}</h1>
+        <h2>Question {{question_number+1}} out of {{num_questions}}: </h2>
+        <h3>{{question}}</h3>
         <p>Current Score: {{score}}</p>
         <p>Select your answer:</p>
         {% for option in options %}
