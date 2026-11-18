@@ -12,11 +12,25 @@
         <h3>{{question}}</h3>
         <p>Current Score: {{score}}</p>
         <p>Select your answer:</p>
+        {% if answer_error %}
+            <p>{{ answer_error }}</p>
+        {% endif %}
         {% for option in options %}
-            <input type="radio" name="answer" value="{{option}}">
+            <input type="radio" name="answer" value="{{option}}" required>
             {{option}}<br>
         {% endfor %}
         <button type="submit">Submit Answer</button>
     </form>
+
+    {% if hint %}
+        <p><strong>Hint:</strong> {{ hint }}</p>
+    {% elif hint_used %}
+        <p></p>
+    {% else %}
+        <form method="POST">
+            <button type="submit" name="hint" value="request">Request a Hint</button>
+            <p> *Hints can only be used once per game.</p>
+        </form>
+    {% endif %}
 </body>
 </html>

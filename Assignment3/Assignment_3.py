@@ -16,6 +16,8 @@ import os
 with open("questions.json") as file:
     ALL_QUESTIONS = json.load(file)
 
+HINTS = ALL_QUESTIONS.pop("hints", {})
+
 QUESTIONS_PER_QUIZ = 5
 num_questions = min(QUESTIONS_PER_QUIZ, len(ALL_QUESTIONS))
 
@@ -36,6 +38,8 @@ def start_quiz():
     session["question_number"] = 0
     session["quiz_questions"] = random.sample(list(ALL_QUESTIONS.items()), num_questions)
     session["quiz_active"] = True
+    session["hint_used"] = False
+    session["hint_question"] = None
 
 def record_quiz_score():
     if not session.get("quiz_active"):
@@ -80,17 +84,29 @@ def quiz():
     questions = session["quiz_questions"]
     question_number = session["question_number"]
     score = session["quiz_score"]
+    answer_error = None
 
     if request.method == "POST":
-        question_data = questions[question_number][1]
-        correct_answer = question_data[0]
+        if request.form.get("hint") == "request":
+            if not session.get("hint_used"):
+                session["hint_used"] = True
+                session["hint_question"] = question_number
+        else:
+            selected_answer = request.form.get("answer")
 
-        if request.form.get("answer") == correct_answer:
-            score += 1
+            if selected_answer is not None:
+                question_data = questions[question_number][1]
+                correct_answer = question_data[0]
 
-        session["quiz_score"] = score
-        question_number += 1
-        session["question_number"] = question_number
+                if selected_answer == correct_answer:
+                    score += 1
+
+                session["quiz_score"] = score
+                question_number += 1
+                session["question_number"] = question_number
+                session["hint_question"] = None
+            else:
+                answer_error = "***Please select an answer before submitting."
 
     if question_number >= len(questions):
         record_quiz_score()
@@ -102,13 +118,20 @@ def quiz():
     options = list(question_data)
     random.shuffle(options)
 
+    hint = None
+    if session.get("hint_used") and session.get("hint_question") == question_number:
+        hint = HINTS[questions[question_number][0]]
+
     return render_template("quiz.html",
         name=session["name"],
         question_number=question_number,
         question=questions[question_number][0],
         options=options,
         score=score,
-        num_questions=num_questions)
+        num_questions=num_questions,
+        hint=hint,
+        hint_used=session.get("hint_used", False),
+        answer_error=answer_error)
 
 #results.html
 @app.route('/results', methods=["GET", "POST"])
