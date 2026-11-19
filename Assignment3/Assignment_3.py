@@ -1,9 +1,12 @@
 #Name: Nicole Song
-#Date: November 17, 2026
+#Date: November 18, 2026
 
 #Assignment: Turn the quiz game from Assignment 1 into an interactive web application
 #Requirement 1 (#1): Use cookies or sessions to check if a user has already visited the quiz game and act accordingly
 #Requirement 2 (#5): Allow users to request a hint on a question and limit it to once per game OR deduct points when used
+#Extra credit (#8): Include a progress bar to visually represent quiz completion status
+#Extra credit (#10): Design the application to be fully responsive, ensuring it works seamlessly on both desktop and mobile devices
+
 
 #Started with parts from the Assignment 3 Workshop, parts from Assignment 1, and parts from Lab13 Ex4
 
@@ -41,6 +44,7 @@ def start_quiz():
     session["quiz_active"] = True
     session["hint_used"] = False
     session["hint_question"] = None
+    session["quiz_answers"] = []
 
 def record_quiz_score():
     if not session.get("quiz_active"):
@@ -109,9 +113,20 @@ def quiz():
             if selected_answer is not None:
                 question_data = questions[question_number][1]
                 correct_answer = question_data[0]
+                is_correct = selected_answer == correct_answer
 
-                if selected_answer == correct_answer:
+                if is_correct:
                     score += 1
+
+                #Allows the user to review their answers after the quiz is completed
+                quiz_answers = session.setdefault("quiz_answers", [])
+                quiz_answers.append({
+                    "question": questions[question_number][0],
+                    "selected_answer": selected_answer,
+                    "correct_answer": correct_answer,
+                    "is_correct": is_correct
+                })
+                session["quiz_answers"] = quiz_answers
 
                 session["quiz_score"] = score
                 question_number += 1
@@ -158,6 +173,18 @@ def results():
         score=session.get("quiz_score", 0),
         num_questions=num_questions,
         score_history=session.get("score_histories", {}).get(session.get("name"), [])
+    )
+
+#answers.html
+@app.route("/answers")
+def answers():
+    if "name" not in session:
+        return redirect(url_for("index"))
+
+    return render_template(
+        "answers.html",
+        name=session["name"],
+        quiz_answers=session.get("quiz_answers", [])
     )
 
 #Allows the user to log out

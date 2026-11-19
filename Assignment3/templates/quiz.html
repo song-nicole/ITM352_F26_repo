@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <!-- Extra credit (#10): Width and padding uses percentages for responsive design -->
     <style>
         body {
             margin: auto;
             width: 95%;
             padding-left: 3%;
             padding-top: 1%;
+        }
+        .answer_error {
+            color: red;
         }
         button {
             border-radius: 20%;
@@ -18,17 +22,35 @@
             margin: 3px;
             padding: 2px;
         }
+        .progress-text {
+            margin-top: 10px;
+        }
+        progress {
+            width: 80%;
+            height: 20px;
+            margin: auto 11px;
+        }
     </style>
 </head>
 <body>
     <h1>{{ name }}'s Hawaii Quiz</h1>
+
+    <!-- Extra credit (#8): Progress bar -->
+    <div class="progress-text">
+        Progress: {{ question_number }} of {{ num_questions }}
+    </div>
+    <progress
+        value="{{ question_number }}"
+        max="{{ num_questions }}">
+    </progress>
+
     <form method="POST">
         <h2>Question {{question_number+1}} out of {{num_questions}}: </h2>
         <h3>{{question}}</h3>
         <p>Current Score: {{score}}</p>
         <p>Select your answer:</p>
         {% if answer_error %}
-            <p>{{ answer_error }}</p>
+            <p class="answer_error">{{ answer_error }}</p>
         {% endif %}
         {% for option in options %}
             <input type="radio" name="answer" value="{{option}}">

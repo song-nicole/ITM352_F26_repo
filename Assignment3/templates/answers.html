@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Answers</title>
+    <!-- Extra credit (#10): Width and padding uses percentages for responsive design -->
+    <style>
+        body {
+            margin: auto;
+            width: 95%;
+            padding-left: 3%;
+            padding-top: 1%;
+            padding-bottom: 2%;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}'s Answer Review</h1>
+    <p> *Please note that this quiz review is only for your most recent quiz.</p>
+
+    {% if quiz_answers %}
+        {% for answer in quiz_answers %}
+            <h2>{{ loop.index }}. {{ answer.question }}</h2>
+            <p>Your answer: {{ answer.selected_answer }}</p>
+            {% if answer.is_correct %}                    
+                <p class="correct">Correct</p>
+            {% else %}
+                <p class="incorrect">Incorrect</p>
+                <p>Correct answer: {{ answer.correct_answer }}</p>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>No answers are available for this quiz.</p>
+    {% endif %}
+
+    <a href="{{ url_for('results') }}">Back to Results</a>
+    <br>
+    <a href="{{ url_for('quiz') }}">Retake Quiz</a>
+</body>
+</html>

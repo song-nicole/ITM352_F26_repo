@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Results</title>
+    <!-- Extra credit (#10): Width and padding uses percentages for responsive design -->
     <style>
         body {
             margin: auto;
@@ -25,6 +26,8 @@
             {% endfor %}
         </ol>
     {% endif %}
+    <a href="{{url_for('answers')}}">Review Answers</a>
+    <br>
     <a href="{{url_for('quiz')}}">Retake Quiz</a>
     <br>
     <a href="{{ url_for('logout') }}">Sign Out</a>
