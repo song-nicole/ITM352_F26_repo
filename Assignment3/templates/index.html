@@ -19,6 +19,7 @@
         <h1>Aloha, {{ name }}!</h1>
 
         {% if score_history %}
+            <h1>Welcome back!</h1>
             <h2>Your score history</h2>
             <ol>
                 {% for result in score_history %}
@@ -26,7 +27,11 @@
                 {% endfor %}
             </ol>
         {% else %}
-            <p>Welcome to the Hawaii Quiz!</p>
+            <h2>Welcome to the Hawaii Quiz!</h2>
+            <br>
+            <p>Ready to test your knowledge of Hawaii?</p>
+            <p>Click below to get started!</p>
+            <br>
         {% endif %}
 
         <a href="{{ url_for('quiz') }}">Start Quiz</a>
@@ -41,6 +46,8 @@
             <input type="text" id="name" name="name">
             <button type="submit">Save Name</button>
         </form>
+        <p> *Please note that not entering a name or entering blank spaces will not allow you to proceed.</p>
+        <p> *The name you enter will become your username and is used to track your score.</p>
     {% endif %}
 </body>
 </html>
