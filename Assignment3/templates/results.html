@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Result</title>
+    <title>Quiz Results</title>
+    <style>
+        body {
+            margin: auto;
+            width: 95%;
+            padding-left: 3%;
+            padding-top: 1%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Quiz Result</h1>
+    <h1>Quiz Results</h1>
     <p>Nice work, {{ name }}!</p>
     <p>You scored {{score}} out of {{num_questions}} questions correctly.</p>
     {% if score_history %}
